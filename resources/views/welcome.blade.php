@@ -8,7 +8,7 @@
 
         <!--Start Home-->
         <div class="home_type full-height home__menu">
-            <div class="side side-left container" style="background-image: url(/images/home_personal.jpg);">
+            <div class="side side-left container" style="background-image: url(/images/main.jpg);">
                 <div class="overlayer">
                     <div class="display-table">
                         <div class="display-table-cell">
@@ -19,7 +19,7 @@
                                 <span>@lang('website.home.from')</span>
                             </div>
                             <div class="more_info">
-                                <a href="#contact" target="_self" class="bgColor">@lang('website.home.hire_me')</a>
+                                <a href="mailto:info@oswaldomontes.com" target="_self" class="bgColor">@lang('website.home.hire_me')</a>
                             </div><!--.more_info-->
                         </div><!--.display-table-cell-->
                     </div><!--.display-table-->

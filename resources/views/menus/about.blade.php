@@ -10,10 +10,10 @@
         <div class="sec__content">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-4">
+                    <div class="col-xs-12 col-sm-6">
                         <img src="{{ asset('/images/author.jpg') }}" class="full_width about__img" alt="author">
                     </div>
-                    <div class="col-xs-12 col-sm-8">
+                    <div class="col-xs-12 col-sm-6">
                         <div class="heading">
                             <h2>@lang('website.sections.about.heading')</h2>
                         </div>

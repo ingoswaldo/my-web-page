@@ -23,7 +23,7 @@
                         <div class="col-xs-12 col-sm-6 item grid-item ">
                             <div class="project_content">
                                 <div class="my__img">
-                                    <img src="{{ asset('images/works/work-1.jpg') }}" alt="" />
+                                    <img src="{{ asset('images/works/backoffice/1.png') }}" alt="" />
                                 </div>
 
                                 <div class="info">
@@ -47,7 +47,7 @@
                         <div class="col-xs-12 col-sm-6 item grid-item ">
                             <div class="project_content">
                                 <div class="my__img">
-                                    <img src="{{ asset('images/works/work-1.jpg') }}" alt="" />
+                                    <img src="{{ asset('images/works/buzip/1.png') }}" alt="" />
                                 </div>
 
                                 <div class="info">
@@ -71,7 +71,7 @@
                         <div class="col-xs-12 col-sm-6 item grid-item ecommerce">
                             <div class="project_content">
                                 <div class="my__img">
-                                    <img src="{{ asset('images/works/work-1.jpg') }}" alt="" />
+                                    <img src="{{ asset('images/works/caribbeanticketshop/1.png') }}" alt="" />
                                 </div>
 
                                 <div class="info">
@@ -95,7 +95,7 @@
                         <div class="col-xs-12 col-sm-6 item grid-item stats">
                             <div class="project_content">
                                 <div class="my__img">
-                                    <img src="{{ asset('images/works/work-1.jpg') }}" alt="" />
+                                    <img src="{{ asset('images/works/cedsucre/1.png') }}" alt="" />
                                 </div>
 
                                 <div class="info">
@@ -119,7 +119,7 @@
                         <div class="col-xs-12 col-sm-6 item grid-item stats">
                             <div class="project_content">
                                 <div class="my__img">
-                                    <img src="{{ asset('images/works/work-1.jpg') }}" alt="" />
+                                    <img src="{{ asset('images/works/ganobaloto/1.png') }}" alt="" />
                                 </div>
 
                                 <div class="info">
@@ -143,7 +143,7 @@
                         <div class="col-xs-12 col-sm-6 item grid-item goverment">
                             <div class="project_content">
                                 <div class="my__img">
-                                    <img src="{{ asset('images/works/work-1.jpg') }}" alt="" />
+                                    <img src="{{ asset('images/works/metrosabanas/1.png') }}" alt="" />
                                 </div>
 
                                 <div class="info">
@@ -167,7 +167,7 @@
                         <div class="col-xs-12 col-sm-6 item grid-item academic">
                             <div class="project_content">
                                 <div class="my__img">
-                                    <img src="{{ asset('images/works/work-1.jpg') }}" alt="" />
+                                    <img src="{{ asset('images/works/ondas/1.png') }}" alt="" />
                                 </div>
 
                                 <div class="info">
@@ -191,7 +191,7 @@
                         <div class="col-xs-12 col-sm-6 item grid-item">
                             <div class="project_content">
                                 <div class="my__img">
-                                    <img src="{{ asset('images/works/work-1.jpg') }}" alt="" />
+                                    <img src="{{ asset('images/works/sincelejoregion/1.png') }}" alt="" />
                                 </div>
 
                                 <div class="info">
