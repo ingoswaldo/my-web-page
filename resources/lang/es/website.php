@@ -62,7 +62,7 @@ return [
             'cecar_description' => 'Desarrollo de una aplicación web para el uso de la investigación como estrategia pedagógica para los niños, niñas y adolescentes vinculados al proyecto ONDAS SUCRE.',
             'cecar_description_2' => 'Actualización de la aplicación web para el uso de la investigación como estrategia pedagógica para los niños, niñas y adolescentes vinculados al proyecto ONDAS SUCRE.',
             'zuomy_description' => 'Desarrollo de una aplicación web para la facturación electrónica.',
-            'creativos_description' => 'Desarrollo de aplicaciones web para entornos educativos, gubernamentales, estadisticos y jurídicos.',
+            'creativos_description' => 'Desarrollo de aplicaciones web para entornos educativos, gubernamentales, estadísticos y jurídicos.',
             'fundimur_description' => 'Desarrollo de una aplicación web para ayudar a potenciar el pensamiento crítico de los estudiantes de las diferentes instituciones educativas del departamento del SUCRE.',
         ],
         'services' => [
