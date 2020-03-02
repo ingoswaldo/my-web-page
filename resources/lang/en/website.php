@@ -55,7 +55,7 @@ return [
             'education' => 'Education',
             'experience' => 'Experience',
             'science_computer' => 'Science in Computer Engineering',
-            'science_computer_description' => 'Graduate in Science in Computer Engineering at the Corporación Unversitaria del Caribe CECAR.',
+            'science_computer_description' => 'Graduate in Science in Computer Engineering at CECAR - Corporación Unversitaria del Caribe.',
             'mobile_devices' => 'Certified in Mobile Devices',
             'mobile_devices_description' => 'Certified in Mobile Devices with 120 hours as hourly intensity.',
             'cts_description' => 'Development of features to already existing web applications for online ticketing.',
