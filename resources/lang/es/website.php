@@ -61,7 +61,7 @@ return [
             'cts_description' => 'Desarrollo de funcionalidades a aplicaciones web existentes para la venta de tiquetes en línea.',
             'cecar_description' => 'Desarrollo de una aplicación web para el uso de la investigación como estrategia pedagógica para los niños, niñas y adolescentes vinculados al proyecto ONDAS SUCRE.',
             'cecar_description_2' => 'Actualización de la aplicación web para el uso de la investigación como estrategia pedagógica para los niños, niñas y adolescentes vinculados al proyecto ONDAS SUCRE.',
-            'zuomy_description' => 'Desarrollo de una aplicacion web para la facturación electrónica.',
+            'zuomy_description' => 'Desarrollo de una aplicación web para la facturación electrónica.',
             'creativos_description' => 'Desarrollo de aplicaciones web para entornos educativos, gubernamentales, estadisticos y jurídicos.',
             'fundimur_description' => 'Desarrollo de una aplicación web para ayudar a potenciar el pensamiento crítico de los estudiantes de las diferentes instituciones educativas del departamento del SUCRE.',
         ],
@@ -73,7 +73,7 @@ return [
             'clean_code' => 'Código Limpio',
             'clean_code_description' => 'Código legible en todas las aplicaciones para que cuando quieras agregar funcionalidades cualquiera que conozca del tema pueda hacerlo sin quejarse.',
             'easy_ui' => 'Interfaces Amigables',
-            'easy_ui_description' => 'Interfaces gráficas intuitivas para que cualquier usuario pueda utilizar las todas las funcionalidades.',
+            'easy_ui_description' => 'Interfaces gráficas intuitivas para que cualquier usuario pueda utilizar todas las funcionalidades.',
         ],
         'works' => [
             'portfolio' => 'Portafolio',
