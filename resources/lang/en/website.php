@@ -57,7 +57,7 @@ return [
             'science_computer' => 'Science in Computer Engineering',
             'science_computer_description' => 'Graduate in Science in Computer Engineering at the Corporación Unversitaria del Caribe CECAR.',
             'mobile_devices' => 'Certified in Mobile Devices',
-            'mobile_devices_description' => 'Certified in Mobile Devices with an hourly intensity of 120 hours.',
+            'mobile_devices_description' => 'Certified in Mobile Devices with 120 hours as hourly intensity.',
             'cts_description' => 'Development of features to already existing web applications for online ticketing.',
             'cecar_description' => 'Development of a web application for the use of research as a pedagogical strategy for children and adolescents working with the ONDAS SUCRE project.',
             'cecar_description_2' => 'Updating of a web application for the use of research as a pedagogical strategy for children and adolescents working with the ONDAS SUCRE project.',
