@@ -7,7 +7,8 @@
 
 return [
     'seo' => [
-        'title' => 'Desarrollador Web Senior PHP/Laravel',
+        'title' => 'Desarrollador Web PHP/Laravel Senior Freelancer',
+        'description' => 'Oswaldo Montes es un desarrollador web PHP senior freelancer utilizando Laravel y aplicaciones híbridas con React Native.',
     ],
     'home' => [
         'home' => 'Inicio',

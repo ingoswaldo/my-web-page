@@ -7,7 +7,8 @@
 
 return [
     'seo' => [
-        'title' => 'Senior Frelancer Web PHP / Laravel Developer',
+        'title' => 'Frelancer Senior Web PHP/Laravel Developer',
+        'description' => 'Oswaldo Montes is a freelancer senior web PHP developer with Laravel and hybrid apps with React Native.',
     ],
     'home' => [
         'home' => 'Home',
