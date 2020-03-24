@@ -32,7 +32,7 @@
     <![endif]-->
 </head>
 
-<body class="home page-template-default front_home">
+<body class="small_menu">
     <div id="page" class="site">
         <!--Start Preloader-->
         <div class="page-loader startLoad">

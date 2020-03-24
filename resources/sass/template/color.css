@@ -2,8 +2,10 @@
 
 	input[type="submit"].btn,
 	input[type="submit"],
+	.small_menu .active_item,
+	.small_menu .menu_list a:hover,
 	.cats a,
-	.home_type .side #typed,
+	.home_type #typed,
 	.social-icons a:hover,
 	.mob-menu .menu-title,
 	.resume .date span,
@@ -28,12 +30,13 @@
 	.comment-reply a,
 	.comment-reply span,
 	.comment-content a {
-	    color: #9b59b6;
+	    color: #e64980 !important;
 	}
 
 	.sec_title h2:after,
 	#about .my__img_content:after,
 	.home_type .more_info a:not(.bgColor):hover,
+	.home---line,
 	.home_type .more_info a.bgColor,
 	.skills .skill .progress_bar,
 	.resume .date:after,
@@ -58,7 +61,7 @@
 	input[type="submit"]:before,
 	.contact .contact_form .submit:hover,
 	header.entry-header:after {
-	    background-color: #9b59b6;
+	    background-color: #e64980;
 	}
 
 	input[type="submit"].btn,
@@ -76,18 +79,18 @@
 	form.post-password-form input[type="password"]:focus,
 	form.post-password-form input[type="submit"]:active,
 	form.post-password-form input[type="submit"]:focus {
-	    border-color: #9b59b6;
+	    border-color: #e64980;
 	}
 
 	.resume .date span:before,
 	.entry-footer .tags-links a:hover:before {
-		border-right-color: #9b59b6;
+		border-right-color: #e64980;
 	}
 
 	.menu_list .home-item svg:hover {
-    	fill: #9b59b6;
+    	fill: #e64980;
 	}
 
 	g.Header {
-    	stroke: #9b59b6;
+    	stroke: #e64980;
 	}

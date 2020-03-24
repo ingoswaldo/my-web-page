@@ -16,7 +16,8 @@ return [
         'my_name' => 'OSWALDO MONTES',
         'web_developer' => 'DESARROLLADOR WEB SENIOR',
         'from' => 'COLOMBIANO',
-        'hire_me' => 'Contratarme'
+        'hire_me' => 'Contratarme',
+        'learn_english' => 'Aprender Inglés'
     ],
     'menu' => [
         'home' => 'Inicio',
