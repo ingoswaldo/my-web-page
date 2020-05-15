@@ -60,7 +60,17 @@
 
                             <div class="item">
                                 <div class="date">
-                                    <span>2016 - @lang('website.present')</span>
+                                    <span>2020 - @lang('website.present') - Solvo Global</span>
+                                </div>
+                                <div class="content">
+                                    <h4>@lang('website.software_developer')</h4>
+                                    <p class="text-justify">@lang('website.sections.resume.solvo_description')</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="date">
+                                    <span>2016 - @lang('website.present') - Creativos Tecnologicos IT</span>
                                 </div>
                                 <div class="content">
                                     <h4>@lang('website.web_developer')</h4>
@@ -70,7 +80,7 @@
 
                             <div class="item">
                                 <div class="date">
-                                    <span>2017 - @lang('website.present')</span>
+                                    <span>2017 - @lang('website.present') - Onlinepaycaribe</span>
                                 </div>
                                 <div class="content">
                                     <h4>@lang('website.web_developer_freelancer')</h4>
@@ -80,7 +90,7 @@
 
                             <div class="item">
                                 <div class="date">
-                                    <span>2019</span>
+                                    <span>2019 - CECAR</span>
                                 </div>
                                 <div class="content">
                                     <h4>@lang('website.web_developer_freelancer')</h4>
@@ -90,7 +100,7 @@
 
                             <div class="item">
                                 <div class="date">
-                                    <span>2018 - 2019</span>
+                                    <span>2018 - 2019 - Zuomy Software</span>
                                 </div>
                                 <div class="content">
                                     <h4>@lang('website.web_developer')</h4>
@@ -100,7 +110,7 @@
 
                             <div class="item">
                                 <div class="date">
-                                    <span>2016 - 2017</span>
+                                    <span>2016 - 2017 - CECAR</span>
                                 </div>
                                 <div class="content">
                                     <h4>@lang('website.web_developer')</h4>
@@ -110,7 +120,7 @@
 
                             <div class="item">
                                 <div class="date">
-                                    <span>2014 - 2015</span>
+                                    <span>2014 - 2015 - FUNDIMUR</span>
                                 </div>
                                 <div class="content">
                                     <h4>@lang('website.web_developer')</h4>

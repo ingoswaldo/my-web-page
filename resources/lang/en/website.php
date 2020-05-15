@@ -65,6 +65,7 @@ return [
             'zuomy_description' => 'Development of an electronic invoicing system.',
             'creativos_description' => 'Development of applications for educational, goverment, statistical and legal environments.',
             'fundimur_description' => 'Development of a web application to help potentialize the critical thinking of students from different educational institutions of the SUCRE department.',
+            'solvo_description' => 'Development of a web application to integrate multiples applications with API call.',
         ],
         'services' => [
             'web_development' => 'Web Development',
@@ -107,4 +108,5 @@ return [
     'web_developer_freelancer' => 'Freelancer Web Developer',
     'date' => 'Date',
     'skills' => 'Skills',
+    'software_developer' => 'Software Developer',
 ];
