@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="@lang('website.seo.keywords')">
     <meta name="description" content="@lang('website.seo.description')">
 
     <!-- TITLE OF SITE -->
@@ -32,7 +33,7 @@
     <![endif]-->
 </head>
 
-<body class="home page-template-default front_home">
+<body class="small_menu">
     <div id="page" class="site">
         <!--Start Preloader-->
         <div class="page-loader startLoad">

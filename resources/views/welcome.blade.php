@@ -7,8 +7,8 @@
         @endphp
 
         <!--Start Home-->
-        <div class="home_type full-height home__menu">
-            <div class="side side-left container" style="background-image: url(/images/main.jpg);">
+        <div class="side side-left" style="background-image: url(/images/main.jpg);">
+            <div class="home_type full-height home__menu">
                 <div class="overlayer">
                     <div class="display-table">
                         <div class="display-table-cell">
@@ -20,6 +20,9 @@
                             </div>
                             <div class="more_info">
                                 <a href="mailto:info@oswaldomontes.com" target="_self" class="bgColor">@lang('website.home.hire_me')</a>
+                                @if($locale === 'es')
+                                    <a href="https://kaleanders.com/raio?affiliate_id=2285300&aff_sub=&aff_sub2=&nopopup=false&noautoplay=false&cookiepreview=true" target="_blank">@lang('website.home.learn_english')</a>
+                                @endif
                             </div><!--.more_info-->
                         </div><!--.display-table-cell-->
                     </div><!--.display-table-->
@@ -35,11 +38,11 @@
             <div class="mob-menu-content">
                 <div class="float-left">
                     <h3 class="menu-title">
-                        <a href="http://www.ideas-factory.org/geeky">Oswaldo Montes</a>
+                        <a href="#">Oswaldo Montes</a>
                     </h3>
                 </div>
                 <div class="float-right">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <button type="button" class="navbar-toggle collapsed">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -56,9 +59,26 @@
                     <span class="home-line"></span>
                     <span class="home-line"></span>
                 </div>
+                <div class="lines--content">
+                    <span class="home--line"></span>
+                    <span class="home--line"></span>
+                    <span class="home--line"></span>
+                    <span class="home---line"></span>
+                    <span class="home---line"></span>
+                    <span class="home---line"></span>
+                </div>
             </div>
             <div class="intro-content">
+                <div class="profile">
+                    <img src="/images/author.jpg" alt="author">
+                </div>
+                <h2><span>Oswaldo Montes</span></h2>
                 <div class="menu">
+                    <div class="social-icons">
+                        <a target="_blank" href="https://www.linkedin.com/in/oswaldomontesseveriche">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
                     <!--Menu Items-->
                     <ul id="menu" class="list-unstyled menu_list">
                         <li class="menu-item ">

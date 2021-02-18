@@ -7,8 +7,9 @@
 
 return [
     'seo' => [
-        'title' => 'Frelancer Senior Web PHP/Laravel Developer',
-        'description' => 'Oswaldo Montes is a freelancer senior web PHP developer with Laravel and hybrid apps with React Native.',
+        'title' => 'Oswaldo Montes | Senior Web Developer | PHP | Laravel',
+        'keywords' => 'Oswaldo Montes, senior, php, web, freelancer, laravel, developer, react native, junior',
+        'description' => 'Oswaldo Montes is a freelancer senior web PHP developer with Laravel and junior hybrid apps developer with React Native.',
     ],
     'home' => [
         'home' => 'Home',
@@ -65,6 +66,7 @@ return [
             'zuomy_description' => 'Development of an electronic invoicing system.',
             'creativos_description' => 'Development of applications for educational, goverment, statistical and legal environments.',
             'fundimur_description' => 'Development of a web application to help potentialize the critical thinking of students from different educational institutions of the SUCRE department.',
+            'solvo_description' => 'Development of a web application to integrate multiples applications with API call.',
         ],
         'services' => [
             'web_development' => 'Web Development',
@@ -107,4 +109,5 @@ return [
     'web_developer_freelancer' => 'Freelancer Web Developer',
     'date' => 'Date',
     'skills' => 'Skills',
+    'software_developer' => 'Software Developer',
 ];
