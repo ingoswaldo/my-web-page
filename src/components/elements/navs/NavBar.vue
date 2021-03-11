@@ -39,7 +39,7 @@
 
 <script>
 import Logo from "@/components/icons/Logo";
-import NavLink from "@/components/elements/Navs/NavLink";
+import NavLink from "@/components/elements/navs/NavLink";
 
 export default {
   name: "NavBar",

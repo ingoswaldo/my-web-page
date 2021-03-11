@@ -16,7 +16,7 @@ module.exports = {
     },
     extend: {
       height: {
-        '3/4-screen': '75vh'
+        '4/5-screen': '80vh'
       },
       borderRadius: {
         '4xl': '10rem',
