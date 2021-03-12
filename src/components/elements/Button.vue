@@ -1,16 +1,9 @@
 <template>
-  <div>
-    <a v-if="isLink" :href="url"
-       class="inline-flex items-center | px-4 py-2 | hover:opacity-70 | rounded-2xl | uppercase | focus:outline-none">
-      <slot name="text">{{ text }}</slot>
-    </a>
-
-    <button v-else :type="type"
-            v-bind:class="getColorClasses()"
-            class="inline-flex items-center | px-4 py-2 | hover:opacity-70 | rounded-2xl | uppercase | focus:outline-none">
-      <slot name="text">{{ text }}</slot>
-    </button>
-  </div>
+  <button :type="type"
+          v-bind:class="getColorClasses()"
+          class="inline-flex items-center | px-4 py-2 | hover:opacity-70 | rounded-full | uppercase | focus:outline-none">
+    <slot name="text">{{ text }}</slot>
+  </button>
 </template>
 
 <script>
@@ -26,16 +19,6 @@ export default {
       type: String,
       required: false,
       default: ''
-    },
-    isLink: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    url: {
-      type: String,
-      required: false,
-      default: '#'
     },
     color: {
       type: String,

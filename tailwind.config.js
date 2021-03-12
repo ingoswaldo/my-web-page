@@ -10,6 +10,7 @@ module.exports = {
         DEFAULT: '#ffffff'
       },
       gray: {
+        light: '#efefef',
         DEFAULT: '#bbbbbb',
         dark: '#898989'
       }
@@ -19,6 +20,7 @@ module.exports = {
         '4/5-screen': '80vh'
       },
       borderRadius: {
+        '3xl': '5rem',
         '4xl': '10rem',
         '5xl': '15rem',
         '6xl': '20rem',
