@@ -12,9 +12,11 @@
     "animejs": "^3.2.1",
     "aos": "^2.3.4",
     "core-js": "^3.6.5",
+    "smoothscroll-polyfill": "^0.4.4",
     "vue": "^2.6.11",
     "vue-meta": "^2.4.0",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.2.0",
+    "vue-waypoint": "^3.5.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.3",

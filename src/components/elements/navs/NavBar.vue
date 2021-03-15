@@ -1,5 +1,5 @@
 <template>
-  <nav class="py-0 md:py-8">
+  <nav class="fixed | w-full | z-10 | top-0 | py-0 md:py-8 | bg-blue">
     <div class="max-w-7xl mx-auto | px-2 sm:px-6 lg:px-8">
       <div class="relative | flex | items-center justify-between | h-16">
         <div class="absolute | inset-y-0 | left-0 | flex items-center sm:hidden">
@@ -25,14 +25,15 @@
         </div>
 
         <div class="absolute | inset-y-0 | right-0 | hidden sm:flex items-center | pr-2 | sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <nav-link title="Home" :active="markAsRouteActive('Home')"/>
-          <nav-link title="About" :active="markAsRouteActive('About')"/>
+          <nav-link title="Home" :active="isHomeRoute() || markAsRouteActive('#home')" />
+          <nav-link title="About" :active="markAsRouteActive('#about')" url="#about" />
         </div>
       </div>
     </div>
 
     <div class="px-2 pt-2 pb-3 | space-y-1" v-show="showCloseMenuIcon">
-      <nav-link title="Home" :active="markAsRouteActive('Home')"/>
+      <nav-link title="Home" :active="isHomeRoute() || markAsRouteActive('#home')"/>
+      <nav-link title="About" :active="markAsRouteActive('#about')" url="#about" />
     </div>
   </nav>
 </template>
@@ -65,12 +66,20 @@ export default {
       return this.showCloseMenuIcon === false
     },
 
+    isHomeRoute() {
+      return this.getCurrentRouteHash() === ''
+    },
+
     getCurrentRouteName() {
       return this.$route.name
     },
 
+    getCurrentRouteHash() {
+      return this.$route.hash
+    },
+
     markAsRouteActive(routeName) {
-      return routeName === this.getCurrentRouteName()
+      return routeName === this.getCurrentRouteName() || routeName === this.getCurrentRouteHash()
     },
   },
 }

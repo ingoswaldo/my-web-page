@@ -1,15 +1,15 @@
 <template>
-  <div class="max-w-7xl mx-auto my-4 xl:my-14 | px-2 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto my-16 md:my-32 | px-2 sm:px-6 lg:px-8" v-waypoint="{ active: true, callback: onWaypoint}">
     <div class="flex items-center">
       <div class="flex-1 | text-center sm:text-left">
         <h3 class="wrap-text text-white text-2xl md:text-4xl font-extrabold | my-0 md:my-1">
-          <span v-bind:class="isBlankSpace(letter) ? '': 'letter'" v-for="(letter, index) in slider.hello" :key="index">{{ letter }}</span>
+          <span v-bind:class="isBlankSpace(letter) ? '': 'letter inline-block'" v-for="(letter, index) in slider.hello" :key="index">{{ letter }}</span>
         </h3>
         <h1 class="wrap-text text-white text-4xl md:text-7xl font-extrabold | my-4 md:my-8">
-          <span v-bind:class="isBlankSpace(letter) ? '': 'letter'" v-for="(letter, index) in slider.name" :key="index">{{ letter }}</span>
+          <span v-bind:class="isBlankSpace(letter) ? '': 'letter inline-block'" v-for="(letter, index) in slider.name" :key="index">{{ letter }}</span>
         </h1>
         <h3 class="wrap-text | text-white text-xl md:text-4xl font-bold | my-4 md:my-8">
-          <span v-bind:class="isBlankSpace(letter) ? '': 'letter'" v-for="(letter, index) in slider.description" :key="index">{{ letter }}</span>
+          <span v-bind:class="isBlankSpace(letter) ? '': 'letter inline-block'" v-for="(letter, index) in slider.description" :key="index">{{ letter }}</span>
         </h3>
         <Button text="Hire me!" class="hire-me"/>
       </div>
@@ -25,6 +25,7 @@
 
 import Button from "@/components/elements/Button";
 import anime from "animejs";
+import slider from '@/assets/settings/welcome.json'
 
 export default {
   name: "Welcome",
@@ -33,14 +34,16 @@ export default {
   },
   data: () => {
     return {
-      slider: {
-        hello: 'Hi!',
-        name: 'I\'m Oswaldo Montes',
-        description: 'Senior Web Developer'
-      }
+      slider: slider
     }
   },
   methods: {
+    onWaypoint ({ going}) {
+      if (going === this.$waypointMap.GOING_IN) {
+        this.$router.push('/').catch(() => {})
+      }
+    },
+
     isBlankSpace(letter) {
       return letter === ' '
     },
