@@ -113,7 +113,7 @@ export default {
           opacity: {
             value: [1, 0],
             duration: 1500,
-            delay: 500,
+            delay: 450,
             easing: 'easeOutQuad'
           },
           delay: 250

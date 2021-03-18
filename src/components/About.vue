@@ -1,28 +1,49 @@
 <template>
-  <div v-waypoint="{ active: true, callback: onWaypoint}">
-    <div class="block md:flex items-center">
+  <div>
+    <div class="block md:flex items-center w-full">
       <img src="@/assets/images/author.png" class="xl:w-1/2 | object-cover | xl:rounded-r-3xl" data-aos="zoom-in-right"
            data-aos-duration="2000"/>
 
-      <div class="absolute | w-full md:w-1/2 lg:w-1/2 xl:w-2/3 | right-0 | bg-gray-light | md:rounded-l-3xl | pl-14 pr-14 xl:pr-32 py-12 "
+      <div class="md:absolute | w-full md:w-1/2 lg:w-1/2 xl:w-2/3 | right-0 | bg-gray-light | md:rounded-l-3xl | px-4 py-12 "
            data-aos="zoom-in-right"
            data-aos-duration="2000">
-        <h3 class="text-blue text-4xl font-extrabold">About Me</h3>
+        <h3 class="text-blue text-4xl font-extrabold" v-waypoint="{ active: true, callback: onWaypoint}">About Me</h3>
         <under-line />
 
-        <p class="text-gray-dark text-xl md:text-4xl font-extrabold | my-2 ">{{ about.name }}</p>
-        <p class="text-gray-dark text-xl md:text-4xl font-extrabold | my-2 ">{{ about.job }}</p>
-        <p class="text-gray-dark text-lg md:text-xl font-medium text-justify | my-8 ">{{ about.description1 }}</p>
-        <p class="text-gray-dark text-lg md:text-xl font-medium text-justify | my-8 ">{{ about.description2 }}</p>
+        <p class="text-gray-dark text-xl md:text-xl xl:text-4xl font-extrabold | my-2 ">{{ about.name }}</p>
+        <p class="text-gray-dark text-xl md:text-xl xl:text-4xl font-extrabold | my-2 ">{{ about.job }}</p>
+        <p class="text-gray-dark text-lg md:text-md xl:text-xl font-medium text-justify | my-8 ">{{ about.description1 }}</p>
+        <p class="text-gray-dark text-lg md:text-md xl:text-xl font-medium text-justify | my-8 ">{{ about.description2 }}</p>
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto my-16 md:my-32 | px-2 sm:px-6 lg:px-8" data-aos="zoom-in-right"
+    <div class="block md:flex | max-w-7xl mx-auto my-8 md:my-14 | px-2 sm:px-6 lg:px-8" data-aos="zoom-in-right"
          data-aos-duration="2000">
-      <h3 class="text-blue text-4xl font-extrabold">Education</h3>
-      <under-line />
+      <div class="w-full md:w-1/2 | md:flex-1 md:mx-8">
+        <h3 class="text-blue text-4xl font-extrabold">Education</h3>
+        <under-line />
 
+        <ul class="my-8 | px-4 | list-disc | text-blue text-2xl text-justify">
+          <li v-for="(education, index) in about.education" :key="index" class="font-extrabold">{{ education.title}}
+            <p class="text-gray-dark font-medium | my-2">{{  education.description }}</p>
+          </li>
+        </ul>
+      </div>
 
+      <div class="w-full md:w-1/2 | md:flex-1 md:mx-8">
+        <h3 class="text-blue text-4xl font-extrabold">Skills</h3>
+        <under-line />
+
+        <div class="flex">
+          <ul class="flex-1 | my-8 | list-none | text-blue text-2xl">
+            <li v-for="(skillFrontend, index) in about.skills.frontend" :key="index">{{  skillFrontend.title }}</li>
+          </ul>
+
+          <ul class="flex-1 | my-8 | list-none | text-blue text-2xl">
+            <li v-for="(skillBackend, index) in about.skills.backend" :key="index">{{  skillBackend.title }}</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
