@@ -15,6 +15,11 @@ module.exports = {
         dark: '#898989'
       }
     },
+    borderWidth: {
+      DEFAULT: '1px',
+      '2': '2px',
+      '3': '3px',
+    },
     extend: {
       height: {
         '4/5-screen': '80vh'

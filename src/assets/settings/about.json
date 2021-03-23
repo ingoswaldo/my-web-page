@@ -30,5 +30,56 @@
         "title": "PHP"
       }
     ]
-  }
+  },
+  "jobs": [
+    {
+      "title": "Software Developer",
+      "start_year": "2020",
+      "end_year": "Today",
+      "organization":  "Solvo Global",
+      "description": "Web developer for many USA business environments."
+    },
+    {
+      "title": "Web Developer",
+      "start_year": "2016",
+      "end_year": "2020",
+      "organization":  "Creativos Tecnologicos IT",
+      "description": "Web developer for many Colombia business environments."
+    },
+    {
+      "title": "Web Developer",
+      "start_year": "2017",
+      "end_year": "2020",
+      "organization":  "OnlinePayCaribe",
+      "description": "Web developer for online ticketing web applications."
+    },
+    {
+      "title": "Web Developer",
+      "start_year": "2019",
+      "end_year": "2019",
+      "organization":  "CECAR",
+      "description": "Web developer for update a web application for the use of research as a pedagogical strategy for children and adolescents working with the ONDAS SUCRE project."
+    },
+    {
+      "title": "Web Developer",
+      "start_year": "2018",
+      "end_year": "2019",
+      "organization":  "Zuomy Software",
+      "description": "Web developer for build of an electronic invoicing system."
+    },
+    {
+      "title": "Web Developer",
+      "start_year": "2016",
+      "end_year": "2017",
+      "organization":  "CECAR",
+      "description": "Web developer for build a web application for the use of research as a pedagogical strategy for children and adolescents working with the ONDAS SUCRE project."
+    },
+    {
+      "title": "Web Developer",
+      "start_year": "2014",
+      "end_year": "2015",
+      "organization":  "Fundimur",
+      "description": "Web developer for build a web application to help the critical thinking of students from different educational institutions of the SUCRE department."
+    }
+  ]
 }
