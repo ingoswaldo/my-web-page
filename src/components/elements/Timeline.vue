@@ -1,28 +1,30 @@
 <template>
   <div class="flex max-w-7xl mx-auto my-8 md:my-14 | px-2 sm:px-6 lg:px-8">
-    <div class="w-full md:w-1/2 | md:flex-1 md:mx-8">
+    <div class="w-full md:w-1/2 | md:flex-1 md:mx-8" data-aos="zoom-in-right"
+         data-aos-duration="2000">
       <h3 class="text-blue text-4xl font-extrabold">Experience</h3>
       <under-line/>
 
       <div class="container">
         <div class="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-white">
-          <!-- right -->
-          <div class="flex md:contents" v-for="(job, index) in jobs" :key="index" v-bind:class="isEven(index)? 'flex-row-reverse' : ''">
-            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative" v-if="isEven(index)">
+          <div class="flex md:contents" v-for="(job, index) in jobs" :key="index" v-bind:class="isEven(index)? '' : 'flex-row-reverse'">
+            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative" v-if="isEven(index)" >
               <div class="h-full w-6 flex items-center justify-center">
-                <div class="h-full w-1 bg-blue pointer-events-none rounded-t"></div>
+                <div class="h-full w-1 bg-blue pointer-events-none" v-bind:class="getRightRoundedClass(jobs, index)"></div>
               </div>
               <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue shadow"></div>
             </div>
 
             <div class="bg-blue col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md job-left" v-else>
-              <h3 class="font-semibold text-lg mb-1">{{ job.title }}</h3>
-              <p class="leading-tight text-justify">{{ job.description }}</p>
+              <h3 class="font-extrabold text-2xl mb-1">{{ joinOrganizationAndYearsOfJob(job) }}</h3>
+              <p class="font-extrabold text-xl mb-1">{{ job.title }}</p>
+              <p class="font-medium text-justify">{{ job.description }}</p>
             </div>
 
             <div class="bg-blue col-start-6 col-end-10 p-4 rounded-2xl my-4 mr-auto shadow-md job-right" v-if="isEven(index)">
-              <h3 class="font-semibold text-lg mb-1">{{ job.title }}</h3>
-              <p class="leading-tight text-justify">{{ job.description }}</p>
+              <h3 class="font-extrabold text-2xl mb-1">{{ joinOrganizationAndYearsOfJob(job) }}</h3>
+              <p class="font-extrabold text-xl mb-1">{{ job.title }}</p>
+              <p class="font-medium text-justify">{{ job.description }}</p>
             </div>
 
             <div class="col-start-5 col-end-6 md:mx-auto relative mr-10" v-else>
@@ -56,6 +58,28 @@ export default {
     isEven(number) {
       return number % 2 === 0
     },
+
+    isFirst(index) {
+      return index === 0
+    },
+
+    isLast(array, index) {
+      return array.length  === (index + 1)
+    },
+
+    getRightRoundedClass(array, index) {
+      if (this.isFirst(index)){
+        return 'rounded-t'
+      }
+
+      if (this.isLast(array, index)){
+        return 'rounded-b'
+      }
+    },
+
+    joinOrganizationAndYearsOfJob(job) {
+      return `${job.organization} | ${job.start_year} - ${job.end_year}`
+    }
   }
 }
 </script>
