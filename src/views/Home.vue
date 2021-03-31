@@ -14,6 +14,7 @@
     </div>
 
     <about id="about"/>
+    <services id="services" />
   </div>
 </template>
 
@@ -21,10 +22,12 @@
 
 import CardIcon from "@/components/elements/cards/CardIcon";
 import About from "@/components/About";
+import Services from "@/components/Services";
 
 export default {
   name: 'Home',
   components: {
+    Services,
     About,
     CardIcon
   },

@@ -27,6 +27,7 @@
         <div class="absolute | inset-y-0 | right-0 | hidden sm:flex items-center | pr-2 | sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <nav-link title="Home" :active="isHomeRoute() || markAsRouteActive('#home')" />
           <nav-link title="About" :active="markAsRouteActive('#about')" url="#about" />
+          <nav-link title="Services" :active="markAsRouteActive('#services')" url="#services" />
         </div>
       </div>
     </div>
@@ -34,6 +35,7 @@
     <div class="px-2 pt-2 pb-3 | space-y-1" v-show="showCloseMenuIcon">
       <nav-link title="Home" :active="isHomeRoute() || markAsRouteActive('#home')"/>
       <nav-link title="About" :active="markAsRouteActive('#about')" url="#about" />
+      <nav-link title="Services" :active="markAsRouteActive('#services')" url="#services" />
     </div>
   </nav>
 </template>

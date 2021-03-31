@@ -7,6 +7,8 @@
       </div>
 
       <router-view/>
+
+      <Footer/>
     </div>
   </div>
 </template>
@@ -14,10 +16,12 @@
 <script>
 import NavBar from "@/components/elements/navs/NavBar";
 import Welcome from "@/components/Welcome";
+import Footer from "@/components/Footer";
 
 export default {
   name: 'App',
   components: {
+    Footer,
     Welcome,
     NavBar
   },

@@ -15,7 +15,7 @@
               <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue shadow"></div>
             </div>
 
-            <div class="bg-blue col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md job-left" v-else>
+            <div class="bg-blue col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md" v-else v-bind:class="isMobile() ? 'job-right' : 'job-left'">
               <h3 class="font-extrabold text-2xl mb-1">{{ joinOrganizationAndYearsOfJob(job) }}</h3>
               <p class="font-extrabold text-xl mb-1">{{ job.title }}</p>
               <p class="font-medium text-justify">{{ job.description }}</p>
@@ -55,6 +55,9 @@ export default {
     }
   },
   methods: {
+    isMobile() {
+      return screen.width < 767
+    },
     isEven(number) {
       return number % 2 === 0
     },
