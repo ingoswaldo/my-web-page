@@ -39,13 +39,35 @@
         <h3 class="text-blue text-4xl font-extrabold">Skills</h3>
         <under-line/>
 
-        <div class="flex">
+        <div class="flex flex-wrap">
           <ul class="flex-1 | my-8 | list-none | text-blue text-2xl">
-            <li v-for="(skillFrontend, index) in about.skills.frontend" :key="index">{{ skillFrontend.title }}</li>
+            <h3 class="font-extrabold">Frontend</h3>
+            <li v-for="(skillFrontend, index) in about.skills.frontend" :key="index" class="my-3">
+              <div class="flex items-center">
+                <check class="text-blue | w-8 h-8 | m-1" />
+                {{ skillFrontend.title }}
+              </div>
+            </li>
           </ul>
 
           <ul class="flex-1 | my-8 | list-none | text-blue text-2xl">
-            <li v-for="(skillBackend, index) in about.skills.backend" :key="index">{{ skillBackend.title }}</li>
+            <h3 class="font-extrabold">Backend</h3>
+            <li v-for="(skillBackend, index) in about.skills.backend" :key="index" class="my-3">
+              <div class="flex items-center">
+                <check class="text-blue | w-8 h-8 | m-1" />
+                {{ skillBackend.title }}
+              </div>
+            </li>
+          </ul>
+
+          <ul class="flex-1 | my-8 | list-none | text-blue text-2xl">
+            <h3 class="font-extrabold">Expertises</h3>
+            <li v-for="(skillExpertises, index) in about.skills.expertises" :key="index" class="my-3">
+              <div class="flex items-center">
+                <check class="text-blue | w-8 h-8 | m-1" />
+                {{ skillExpertises.title }}
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -59,10 +81,11 @@
 import info from '@/assets/settings/about.json'
 import UnderLine from "@/components/elements/UnderLine";
 import Timeline from "@/components/elements/Timeline";
+import Check from "@/components/icons/Check";
 
 export default {
   name: "About",
-  components: {Timeline, UnderLine},
+  components: {Check, Timeline, UnderLine},
   data: () => {
     return {
       about: info

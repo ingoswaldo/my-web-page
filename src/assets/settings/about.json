@@ -5,12 +5,20 @@
   "description2": "I'm very responsible with the assumed compromises, with capacity to work individually or in team, proactive and ready to learn new skills from the assigned tasks to be at the head of the technological advances.",
   "education": [
     {
-      "title": "Certified in Mobile Devices",
+      "title": "CQRS",
+      "description": "Command Query Responsibility Segregation Course in CodelyTV."
+    },
+    {
+      "title": "Hexagonal Architecture",
+      "description": "Hexagonal Architecture Course in CodelyTV."
+    },
+    {
+      "title": "Mobile Devices",
       "description": "Certified in Mobile Devices with 120 hours as hourly intensity."
     },
     {
-      "title": "Science in Computer Engineering",
-      "description": "Degree of Science in Computer Engineering at CECAR - Corporación Unversitaria del Caribe."
+      "title": "Computer Engineering",
+      "description": "Science in Computer Engineering at CECAR - Corporación Unversitaria del Caribe."
     }
   ],
   "skills": {
@@ -23,11 +31,37 @@
       },
       {
         "title": "JavaScript"
+      },
+      {
+        "title": "Vue"
       }
     ],
     "backend": [
       {
         "title": "PHP"
+      },
+      {
+        "title": "Laravel"
+      },
+      {
+        "title": "Wordpress"
+      },
+      {
+        "title": "SQL"
+      }
+    ],
+    "expertises": [
+      {
+        "title": "Responsibility"
+      },
+      {
+        "title": "Team Work"
+      },
+      {
+        "title": "Dedication"
+      },
+      {
+        "title": "Adaptability"
       }
     ]
   },
