@@ -8,7 +8,7 @@
           class="md:absolute | w-full md:w-1/2 lg:w-1/2 xl:w-2/3 | right-0 | bg-gray-light | md:rounded-l-3xl | px-4 py-12 "
           data-aos="zoom-in-right"
           data-aos-duration="2000">
-        <h3 class="text-blue text-4xl font-extrabold" v-waypoint="{ active: true, callback: onWaypoint}">About Me</h3>
+        <h3 class="text-blue text-4xl font-extrabold">About Me</h3>
         <under-line/>
 
         <p class="text-gray-dark text-xl md:text-xl xl:text-4xl font-extrabold | my-2 ">{{ about.name }}</p>
@@ -89,14 +89,6 @@ export default {
   data: () => {
     return {
       about: info
-    }
-  },
-  methods: {
-    onWaypoint({going}) {
-      if (going === this.$waypointMap.GOING_IN) {
-        this.$router.push('#about').catch(() => {
-        })
-      }
     }
   }
 }

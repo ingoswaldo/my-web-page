@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-7xl mx-auto my-16 md:my-32 | px-2 sm:px-6 lg:px-8" v-waypoint="{ active: true, callback: onWaypoint}">
+  <div class="max-w-7xl mx-auto my-16 md:my-32 | px-2 sm:px-6 lg:px-8">
     <div class="flex items-center">
       <div class="flex-1 | text-center sm:text-left">
         <h3 class="wrap-text text-white text-2xl md:text-4xl font-extrabold | my-0 md:my-1">
@@ -38,12 +38,6 @@ export default {
     }
   },
   methods: {
-    onWaypoint ({ going}) {
-      if (going === this.$waypointMap.GOING_IN) {
-        this.$router.push('/').catch(() => {})
-      }
-    },
-
     isBlankSpace(letter) {
       return letter === ' '
     },

@@ -4,9 +4,15 @@
         data-aos-duration="2000">Testimonials</h3>
     <div class="flex justify-center p-2 md:p-4" data-aos="zoom-in-right"
          data-aos-duration="2000">
-      <div v-for="(testimonial, index) in testimonials" :key="index" class="w-full md:w-1/3 | p-4 md:p-8"
+      <div v-for="(testimonial, index) in testimonials" :key="index" class="w-full md:w-1/3 | p-4 md:p-8 | transition duration-500 ease-in-out"
+           @mouseenter="mouseEnterOnTestimonial(index)"
+           @mouseleave="mouseLeaveTestimonial()"
            v-bind:class="{ 'opacity-50': getTestimonialActive() !== (index + 1), hidden: isNotOnShowSetting(index + 1)}">
+        <img :src="testimonial.imageUrl" v-if="hasImageUrl(testimonial.imageUrl)"
+             class="mx-auto | rounded-full"
+             v-bind:class="getTestimonialActive() === (index + 1) ? 'h-48 w-48' : 'h-40 w-40'" />
         <div class="mx-auto | bg-blue | rounded-full"
+             v-else
              v-bind:class="getTestimonialActive() === (index + 1) ? 'h-48 w-48' : 'h-40 w-40'"></div>
         <div class="pt-6 text-center space-y-4">
           <div class="text-blue">
@@ -41,11 +47,13 @@
 import Testimonials from "@/assets/settings/testimonials.json"
 
 export default {
-  name: "Comments",
+  name: "Testimonials",
   data: () => {
     return {
       testimonials: Testimonials,
       testimonialSetting: {
+        isAnimationPaused: false,
+        timeForNextTestimonialActive: 10000, //10 seconds
         active: 1,
         visible: {
           sm: 1,
@@ -64,6 +72,10 @@ export default {
       return this.testimonialSetting.show.findIndex(value => value === key) === -1
     },
 
+    hasImageUrl(imageUrl) {
+      return imageUrl !== '' && imageUrl !== undefined
+    },
+
     getTestimonialActive() {
       return this.testimonialSetting.active
     },
@@ -78,7 +90,7 @@ export default {
 
     setTestimonialSettingActive(number) {
       if (this.isNotOnShowSetting(number)) {
-        if (number >= this.getQuantityTestimonialVisible()){
+        if (number >= this.getQuantityTestimonialVisible()) {
           this.testimonialSetting.show.shift()
         } else {
           this.testimonialSetting.show.pop()
@@ -94,27 +106,42 @@ export default {
       this.testimonialSetting.show.push(value)
     },
 
-    removeTestimonialOfShowSetting(value) {
-      let index = this.testimonialSetting.show.findIndex(v => v === value)
-
-      if (index !== -1){
-        this.testimonialSetting.show.splice(value, 1)
+    addVisibleTestimonials() {
+      for (let i = 1; i <= this.getQuantityTestimonialVisible(); i++) {
+        this.addTestimonialToShowSetting(i)
       }
     },
 
-    replaceTestimonialOfShowSetting(key, value) {
-      let index = this.testimonialSetting.show.findIndex(v => v === key)
+    changeTestimonialEvery30Seconds() {
+      setInterval( () => {
+        if (this.testimonialSetting.isAnimationPaused){
+          return
+        }
 
-      if (index !== -1 && this.isNotOnShowSetting(value)){
-        this.testimonialSetting.show.splice(index, 1, value)
-      }
+        let testimonialActive = this.getTestimonialActive();
+        let nextTestimonialActive = testimonialActive + 1
+
+        if (testimonialActive === this.testimonials.length){
+          nextTestimonialActive = 1
+        }
+
+        this.setTestimonialSettingActive(nextTestimonialActive)
+      }, this.testimonialSetting.timeForNextTestimonialActive)
+    },
+
+    mouseEnterOnTestimonial(index) {
+      this.setTestimonialSettingActive(index + 1)
+      this.testimonialSetting.isAnimationPaused = true
+    },
+
+    mouseLeaveTestimonial() {
+      this.testimonialSetting.isAnimationPaused = false
     }
   },
 
   mounted() {
-    for (let i = 1; i <= this.getQuantityTestimonialVisible(); i++) {
-      this.addTestimonialToShowSetting(i)
-    }
+    this.addVisibleTestimonials()
+    this.changeTestimonialEvery30Seconds()
   }
 }
 </script>

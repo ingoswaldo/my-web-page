@@ -15,7 +15,7 @@
 
     <about id="about"/>
     <services id="services" />
-    <comments id="comments" />
+    <comments id="testimonials" />
   </div>
 </template>
 
@@ -24,7 +24,7 @@
 import CardIcon from "@/components/elements/cards/CardIcon";
 import About from "@/components/About";
 import Services from "@/components/Services";
-import Comments from "@/components/Comments";
+import Comments from "@/components/Testimonials";
 
 export default {
   name: 'Home',

@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto mt-8 md:mt-14 | px-2 sm:px-6 lg:px-8 py-2 md:py-14">
       <h3 class="text-4xl text-white font-medium" data-aos="zoom-in-right"
           data-aos-duration="2000">Services</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2" v-waypoint="{ active: true, callback: onWaypoint}">
+      <div class="grid grid-cols-1 md:grid-cols-2">
         <div class="flex items-center | my-4 md:my-14 | px-2" v-for="(service, index) in services" :key="index"
              data-aos="zoom-in-right"
              data-aos-duration="2000">
@@ -54,13 +54,6 @@ export default {
     isMobileIcon(icon) {
       return icon === 'mobile'
     },
-
-    onWaypoint({going}) {
-      if (going === this.$waypointMap.GOING_IN) {
-        this.$router.push('#services').catch(() => {
-        })
-      }
-    }
   }
 }
 </script>

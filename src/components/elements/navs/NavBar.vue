@@ -28,6 +28,7 @@
           <nav-link title="Home" :active="isHomeRoute() || markAsRouteActive('#home')" />
           <nav-link title="About" :active="markAsRouteActive('#about')" url="#about" />
           <nav-link title="Services" :active="markAsRouteActive('#services')" url="#services" />
+          <nav-link title="Testimonials" :active="markAsRouteActive('#testimonials')" url="#testimonials" />
         </div>
       </div>
     </div>
@@ -36,6 +37,7 @@
       <nav-link title="Home" :active="isHomeRoute() || markAsRouteActive('#home')"/>
       <nav-link title="About" :active="markAsRouteActive('#about')" url="#about" />
       <nav-link title="Services" :active="markAsRouteActive('#services')" url="#services" />
+      <nav-link title="testimonials" :active="markAsRouteActive('#testimonials')" url="#testimonials" />
     </div>
   </nav>
 </template>
