@@ -88,14 +88,33 @@ export default {
       return this.testimonialSetting.visible.default
     },
 
-    setTestimonialSettingActive(number) {
-      if (this.isNotOnShowSetting(number)) {
-        if (number >= this.getQuantityTestimonialVisible()) {
-          this.testimonialSetting.show.shift()
-        } else {
-          this.testimonialSetting.show.pop()
+    setRightTestimonialToShowSetting(number) {
+      this.testimonialSetting.show = []
+
+      if (number > this.getQuantityTestimonialVisible()){
+        this.addTestimonialToShowSetting(number)
+
+        for (let i = 1; i < this.getQuantityTestimonialVisible(); i++) {
+          this.addTestimonialToShowSetting(number - i)
         }
 
+        return
+      }
+
+      if (number <= this.getQuantityTestimonialVisible()){
+        this.addTestimonialToShowSetting(number)
+
+        for (let i = 1; i < this.getQuantityTestimonialVisible(); i++) {
+          this.addTestimonialToShowSetting(number + i)
+        }
+
+        return
+      }
+    },
+
+    setTestimonialSettingActive(number) {
+      if (this.isNotOnShowSetting(number)) {
+        this.setRightTestimonialToShowSetting(number)
         this.addTestimonialToShowSetting(number)
       }
 

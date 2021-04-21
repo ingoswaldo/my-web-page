@@ -33,9 +33,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
-      fontSize: ['hover'],
-    },
+    extend: {},
   },
   plugins: [],
 }
