@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Project 1",
+    "type": "stats",
+    "imageUrl": ""
+  },
+  {
+    "title": "Project 2",
+    "type": "government",
+    "imageUrl": ""
+  },
+  {
+    "title": "Project 3",
+    "type": "scholar",
+    "imageUrl": ""
+  },
+  {
+    "title": "Project 4",
+    "type": "e-commerce",
+    "imageUrl": ""
+  },
+  {
+    "title": "Project 5",
+    "type": "stats",
+    "imageUrl": ""
+  },
+  {
+    "title": "Project 6",
+    "type": "scholar",
+    "imageUrl": ""
+  }
+]

@@ -19,7 +19,7 @@
 
         <div class="flex-1 flex | items-center justify-center | sm:items-stretch sm:justify-start">
           <div class="flex-shrink-0 flex items-center">
-            <logo class="block lg:hidden | h-12 w-auto | text-white"/>
+            <logo class="block lg:hidden | h-12 w-32 | text-white"/>
             <logo class="hidden lg:block | h-16 w-auto | text-white"/>
           </div>
         </div>
@@ -29,6 +29,7 @@
           <nav-link title="About" :active="markAsRouteActive('#about')" url="#about" />
           <nav-link title="Services" :active="markAsRouteActive('#services')" url="#services" />
           <nav-link title="Testimonials" :active="markAsRouteActive('#testimonials')" url="#testimonials" />
+          <nav-link title="portfolio" :active="markAsRouteActive('#portfolio')" url="#portfolio" />
         </div>
       </div>
     </div>
@@ -38,6 +39,7 @@
       <nav-link title="About" :active="markAsRouteActive('#about')" url="#about" />
       <nav-link title="Services" :active="markAsRouteActive('#services')" url="#services" />
       <nav-link title="testimonials" :active="markAsRouteActive('#testimonials')" url="#testimonials" />
+      <nav-link title="portfolio" :active="markAsRouteActive('#portfolio')" url="#portfolio" />
     </div>
   </nav>
 </template>

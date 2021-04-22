@@ -55,11 +55,11 @@ export default {
         isAnimationPaused: false,
         timeForNextTestimonialActive: 10000, //10 seconds
         active: 1,
-        visible: {
+        visibleItems: {
           sm: 1,
           default: 3
         },
-        show: []
+        showItems: []
       }
     }
   },
@@ -69,7 +69,7 @@ export default {
     },
 
     isNotOnShowSetting(key) {
-      return this.testimonialSetting.show.findIndex(value => value === key) === -1
+      return this.testimonialSetting.showItems.findIndex(value => value === key) === -1
     },
 
     hasImageUrl(imageUrl) {
@@ -82,14 +82,14 @@ export default {
 
     getQuantityTestimonialVisible() {
       if (this.isOnMobile()) {
-        return this.testimonialSetting.visible.sm
+        return this.testimonialSetting.visibleItems.sm
       }
 
-      return this.testimonialSetting.visible.default
+      return this.testimonialSetting.visibleItems.default
     },
 
     setRightTestimonialToShowSetting(number) {
-      this.testimonialSetting.show = []
+      this.testimonialSetting.showItems = []
 
       if (number > this.getQuantityTestimonialVisible()){
         this.addTestimonialToShowSetting(number)
@@ -122,7 +122,7 @@ export default {
     },
 
     addTestimonialToShowSetting(value) {
-      this.testimonialSetting.show.push(value)
+      this.testimonialSetting.showItems.push(value)
     },
 
     addVisibleTestimonials() {
