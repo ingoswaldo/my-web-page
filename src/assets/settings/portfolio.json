@@ -1,32 +1,42 @@
 [
   {
-    "title": "Project 1",
-    "type": "stats",
-    "imageUrl": ""
-  },
-  {
-    "title": "Project 2",
-    "type": "government",
-    "imageUrl": ""
-  },
-  {
-    "title": "Project 3",
-    "type": "scholar",
-    "imageUrl": ""
-  },
-  {
-    "title": "Project 4",
+    "title": "Caribbean Ticket Shop",
     "type": "e-commerce",
-    "imageUrl": ""
+    "imageUrl": "caribbeanticketshop.png"
   },
   {
-    "title": "Project 5",
-    "type": "stats",
-    "imageUrl": ""
+    "title": "Missann Boat Trips",
+    "type": "e-commerce",
+    "imageUrl": "missannboattrips.png"
   },
   {
-    "title": "Project 6",
+    "title": "Sincelejo Urbano",
+    "type": "government",
+    "imageUrl": "sincelejo-urbano.png"
+  },
+  {
+    "title": "Ced Sucre",
+    "type": "government",
+    "imageUrl": "cedsucre.png"
+  },
+  {
+    "title": "Ondas Sucre",
     "type": "scholar",
-    "imageUrl": ""
+    "imageUrl": "ondas.png"
+  },
+  {
+    "title": "Metro Sabanas",
+    "type": "scholar",
+    "imageUrl": "metrosabanas.png"
+  },
+  {
+    "title": "Gano Baloto",
+    "type": "stats",
+    "imageUrl": "ganobaloto.png"
+  },
+  {
+    "title": "Buzip",
+    "type": "stats",
+    "imageUrl": "buzip.png"
   }
 ]

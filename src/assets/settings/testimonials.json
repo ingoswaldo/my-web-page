@@ -22,17 +22,5 @@
     "organization": "Organization",
     "imageUrl": "",
     "comments": "Tailwind CSS is the only framework that I've seen scale on large teams. It’s easy to customize, adapts to any design, and the build size is tiny."
-  },
-  {
-    "name": "Jon Doe 5",
-    "organization": "Organization",
-    "imageUrl": "",
-    "comments": "Tailwind CSS is the only framework that I've seen scale on large teams. It’s easy to customize, adapts to any design, and the build size is tiny."
-  },
-  {
-    "name": "Jon Doe 6",
-    "organization": "Organization",
-    "imageUrl": "",
-    "comments": "Tailwind CSS is the only framework that I've seen scale on large teams. It’s easy to customize, adapts to any design, and the build size is tiny."
   }
 ]
