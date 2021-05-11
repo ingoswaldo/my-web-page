@@ -14,7 +14,7 @@
         <p class="text-gray-dark text-xl md:text-xl xl:text-4xl font-extrabold | my-2 ">{{ about.name }}</p>
         <p class="text-gray-dark text-xl md:text-xl xl:text-4xl font-extrabold | my-2 ">{{ about.job }}</p>
         <p class="text-gray-dark text-lg md:text-md xl:text-xl font-medium text-justify | my-8 ">{{
-            about.description1
+            changeYearsInDescription(about.description1)
           }}</p>
         <p class="text-gray-dark text-lg md:text-md xl:text-xl font-medium text-justify | my-8 ">{{
             about.description2
@@ -88,8 +88,23 @@ export default {
   components: {Check, Timeline, UnderLine},
   data: () => {
     return {
-      about: info
+      about: info,
+      yearsOfExperience: 5
     }
+  },
+  methods: {
+    getYearsOfExperience(){
+      let yearsInMilliseconds = Math.abs(new Date('2016-01-01') - new Date())
+
+      return Math.floor(yearsInMilliseconds / (1000 * 3600 * 24 * 365))
+    },
+
+    changeYearsInDescription(description) {
+      return description.toString().replace(':years', `+${this.yearsOfExperience}`)
+    }
+  },
+  mounted() {
+    this.yearsOfExperience = this.getYearsOfExperience()
   }
 }
 </script>
