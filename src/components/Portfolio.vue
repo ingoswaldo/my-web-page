@@ -16,21 +16,19 @@
               @click.prevent="setCategorySelect(category)"
               v-bind:class="isCategorySelected(category)? 'text-white | bg-blue' : 'text-gray-dark'">{{ category }}
       </button>
-      <button class="mx-1 | text-2xl text-white font-medium | bg-blue | rounded-full | px-4 py-1 | focus:outline-none"
-              data-aos="zoom-in-right"
-              data-aos-duration="2000">
+      <button class="mx-1 | text-2xl text-white font-medium | bg-blue | rounded-full | px-4 py-1 | focus:outline-none | disabled:opacity-50"
+              @click.prevent="previousPortfolio()"
+              :disabled="portfolioSetting.buttons.disabledPrevious">
         &lt;
       </button>
-      <button class="mx-1 | text-2xl text-white font-medium | bg-blue | rounded-full | px-4 py-1 | focus:outline-none"
-              data-aos="zoom-in-right"
-              data-aos-duration="2000">
+      <button class="mx-1 | text-2xl text-white font-medium | bg-blue | rounded-full | px-4 py-1 | focus:outline-none | disabled:opacity-50"
+              @click.prevent="nextPortfolio()"
+              :disabled="portfolioSetting.buttons.disabledNext">
         &gt;
       </button>
     </div>
     <div class="flex justify-center | my-4">
       <img class="h-48 md:h-80 | bg-blue | mx-auto | object-cover portfolio"
-           data-aos="zoom-in-right"
-           data-aos-duration="2000"
            v-for="(portfolio, index) in portfoliosFilterByCategory"
            :key="index"
            :src="loadImage(portfolio.imageUrl)"
@@ -53,7 +51,11 @@ export default {
           md: 2,
           default: 4
         },
-        showItems: []
+        showItems: [],
+        buttons: {
+          disabledPrevious: true,
+          disabledNext: false
+        }
       },
       categories: [],
       categorySetting: {
@@ -142,28 +144,7 @@ export default {
     },
 
     removeLastPortfolioItem() {
-      this.portfolioSetting.showItems.shift()
-    },
-
-    setRightPortfoliosToShowSetting(number) {
-      if (this.isOnShowSetting(number)) {
-        return
-      }
-
-      if (this.getQuantityPortfolioVisible() > 1) {
-
-        if (number > this.getQuantityPortfolioVisible()) {
-          this.removeFirstPortfolioItem()
-          this.addPortfolioToShowSetting(number)
-        }
-
-        if (number <= this.getQuantityPortfolioVisible()) {
-          this.removeLastPortfolioItem()
-          this.addPortfolioToBeginningShowSetting(number)
-        }
-      }
-
-      this.addPortfolioToShowSetting(number)
+      this.portfolioSetting.showItems.pop()
     },
 
     addCategory(category) {
@@ -188,10 +169,88 @@ export default {
 
     setCategorySelect(name) {
       this.categorySetting.selected = name
+      this.updatePreviousAndNextButtonsState()
+
+      if (name !== 'all'){
+        this.addFilterPortfoliosToShowItems()
+      }
+    },
+
+    updatePreviousAndNextButtonsState() {
+      if (this.portfoliosFilterByCategory.length < this.getQuantityPortfolioVisible()){
+        this.setPreviousDisabled()
+        this.setNextDisabled()
+
+        return
+      }
+
+      this.setNextEnabled()
+    },
+
+    addFilterPortfoliosToShowItems() {
+      this.portfoliosFilterByCategory.forEach((item, index) => this.addPortfolioToShowSetting(index + 1))
     },
 
     loadImage(name) {
       return require(`@/assets/images/${name}`)
+    },
+
+    setPreviousEnabled() {
+      this.portfolioSetting.buttons.disabledPrevious = false
+    },
+
+    setNextEnabled() {
+      this.portfolioSetting.buttons.disabledNext = false
+    },
+
+    setPreviousDisabled() {
+      this.portfolioSetting.buttons.disabledPrevious = true
+    },
+
+    setNextDisabled() {
+      this.portfolioSetting.buttons.disabledNext = true
+    },
+
+    isNextButtonDisabled() {
+      return this.portfolioSetting.buttons.disabledNext
+    },
+
+    isPreviousButtonDisabled() {
+      return this.portfolioSetting.buttons.disabledPrevious
+    },
+
+    previousPortfolio() {
+      let firstItem = this.portfolioSetting.showItems.slice(0, 1)[0]
+
+      if (firstItem >= 1) {
+        this.removeLastPortfolioItem()
+        this.addPortfolioToBeginningShowSetting(firstItem - 1)
+      }
+
+      if ((firstItem - 2) < 1) {
+        this.setPreviousDisabled()
+      }
+
+      if (this.isNextButtonDisabled()){
+        this.setNextEnabled()
+      }
+    },
+
+    nextPortfolio() {
+      let lastItem = this.portfolioSetting.showItems.slice(-1)[0]
+
+      if (lastItem < this.portfoliosFilterByCategory.length) {
+        this.removeFirstPortfolioItem()
+        this.addPortfolioToShowSetting(lastItem + 1)
+      }
+
+      if ((lastItem + 2) > this.portfoliosFilterByCategory.length) {
+        this.setNextDisabled()
+      }
+
+      if (this.isPreviousButtonDisabled()){
+        this.setPreviousEnabled()
+      }
     }
   },
 

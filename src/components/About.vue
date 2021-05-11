@@ -96,7 +96,7 @@ export default {
     getYearsOfExperience(){
       let yearsInMilliseconds = Math.abs(new Date('2016-01-01') - new Date())
 
-      return Math.floor(yearsInMilliseconds / (1000 * 3600 * 24 * 365))
+      return Math.floor(yearsInMilliseconds / (1000 * 3600 * 24 * 365) + 0.75) //0.75 = 9 month worked before 2016-01-01
     },
 
     changeYearsInDescription(description) {
