@@ -6,39 +6,44 @@
          data-aos="zoom-in-right"
          data-aos-duration="2000"
          data-aos-once="true">
-      <button class="text-lg font-medium capitalize | rounded-full | px-4 py-0 | focus:outline-none"
-              @click.prevent="setCategorySelect('all')"
-              v-bind:class="isCategorySelected('all')? 'text-white | bg-blue' : 'text-gray-dark'">All
+      <button
+          class="invisible md:visible | text-lg font-medium capitalize | rounded-full | px-4 py-0 | focus:outline-none"
+          @click.prevent="setCategorySelect('all')"
+          v-bind:class="isCategorySelected('all')? 'text-white | bg-blue' : 'text-gray-dark'">All
       </button>
-      <button class="text-lg font-medium capitalize | rounded-full | px-4 py-0 | focus:outline-none"
-              v-for="(category, index) in categories"
-              :key="index"
-              @click.prevent="setCategorySelect(category)"
-              v-bind:class="isCategorySelected(category)? 'text-white | bg-blue' : 'text-gray-dark'">{{ category }}
+      <button
+          class="invisible md:visible | text-lg font-medium capitalize | rounded-full | px-4 py-0 | focus:outline-none"
+          v-for="(category, index) in categories"
+          :key="index"
+          @click.prevent="setCategorySelect(category)"
+          v-bind:class="isCategorySelected(category)? 'text-white | bg-blue' : 'text-gray-dark'">{{ category }}
       </button>
-      <button class="mx-1 | text-2xl text-white font-medium | bg-blue | rounded-full | px-4 py-1 | focus:outline-none | disabled:opacity-50"
-              @click.prevent="previousPortfolio()"
-              :disabled="portfolioSetting.buttons.disabledPrevious">
+      <button
+          class="mx-1 | text-2xl text-white font-medium | bg-blue | rounded-full | px-4 py-1 | focus:outline-none | disabled:opacity-50"
+          @click.prevent="previousPortfolio()"
+          :disabled="portfolioSetting.buttons.disabledPrevious">
         &lt;
       </button>
-      <button class="mx-1 | text-2xl text-white font-medium | bg-blue | rounded-full | px-4 py-1 | focus:outline-none | disabled:opacity-50"
-              @click.prevent="nextPortfolio()"
-              :disabled="portfolioSetting.buttons.disabledNext">
+      <button
+          class="mx-1 | text-2xl text-white font-medium | bg-blue | rounded-full | px-4 py-1 | focus:outline-none | disabled:opacity-50"
+          @click.prevent="nextPortfolio()"
+          :disabled="portfolioSetting.buttons.disabledNext">
         &gt;
       </button>
     </div>
-    <div class="flex justify-center | my-4">
+    <div class="flex justify-center | my-4 anime">
       <img class="h-48 md:h-80 | bg-blue | mx-auto | object-cover portfolio"
            v-for="(portfolio, index) in portfoliosFilterByCategory"
            :key="index"
            :src="loadImage(portfolio.imageUrl)"
-           v-bind:class="{'absolute | left-0 | w-1/12 2xl:w-2/12 | rounded-r-2xl': canShowFirstPortfolio(index + 1), 'absolute | right-0 | w-1/12 2xl:w-2/12 | rounded-l-2xl': canShowLastPortfolio(index + 1), 'w-1/3 2xl:w-5/12 | rounded-2xl': canShowPortfolio(index + 1), hidden: !isOnShowSetting(index + 1), 'w-full | rounded-2xl | mx-2': (isOnMobile() || isOnTablet()) && isOnShowSetting(index + 1), 'space-x-1': isOnMobile() || isOnTablet()}" />
+           v-bind:class="{'absolute | left-0 | w-1/12 2xl:w-2/12 | rounded-r-2xl': canShowFirstPortfolio(index + 1), 'absolute | right-0 | w-1/12 2xl:w-2/12 | rounded-l-2xl': canShowLastPortfolio(index + 1), 'w-1/3 2xl:w-5/12 | rounded-2xl': canShowPortfolio(index + 1), hidden: !isOnShowSetting(index + 1), 'w-full | rounded-2xl | mx-2': (isOnMobile() || isOnTablet()) && isOnShowSetting(index + 1), 'space-x-1': isOnMobile() || isOnTablet()}"/>
     </div>
   </div>
 </template>
 
 <script>
 import Portfolios from "@/assets/settings/portfolio.json"
+import anime from "animejs";
 
 export default {
   name: "Portfolio",
@@ -55,12 +60,13 @@ export default {
         buttons: {
           disabledPrevious: true,
           disabledNext: false
-        }
+        },
+        animate: null
       },
       categories: [],
       categorySetting: {
         selected: 'all'
-      }
+      },
     }
   },
   computed: {
@@ -169,15 +175,14 @@ export default {
 
     setCategorySelect(name) {
       this.categorySetting.selected = name
-      this.updatePreviousAndNextButtonsState()
 
-      if (name !== 'all'){
-        this.addFilterPortfoliosToShowItems()
-      }
+      this.updatePreviousAndNextButtonsState()
+      this.addFilterPortfoliosToShowItems()
+      this.playAnimation()
     },
 
     updatePreviousAndNextButtonsState() {
-      if (this.portfoliosFilterByCategory.length < this.getQuantityPortfolioVisible()){
+      if (this.portfoliosFilterByCategory.length < this.getQuantityPortfolioVisible()) {
         this.setPreviousDisabled()
         this.setNextDisabled()
 
@@ -187,8 +192,16 @@ export default {
       this.setNextEnabled()
     },
 
-    addFilterPortfoliosToShowItems() {
-      this.portfoliosFilterByCategory.forEach((item, index) => this.addPortfolioToShowSetting(index + 1))
+    async addFilterPortfoliosToShowItems() {
+      this.portfolioSetting.showItems = []
+
+      await this.portfoliosFilterByCategory.forEach((item, index) => {
+        if (this.getQuantityPortfolioVisible() > this.portfolioSetting.showItems.length){
+          this.addPortfolioToShowSetting(index + 1)
+        }
+      })
+
+      this.addAnimation()
     },
 
     loadImage(name) {
@@ -231,9 +244,11 @@ export default {
         this.setPreviousDisabled()
       }
 
-      if (this.isNextButtonDisabled()){
+      if (this.isNextButtonDisabled()) {
         this.setNextEnabled()
       }
+
+      this.playAnimation()
     },
 
     nextPortfolio() {
@@ -248,17 +263,58 @@ export default {
         this.setNextDisabled()
       }
 
-      if (this.isPreviousButtonDisabled()){
+      if (this.isPreviousButtonDisabled()) {
         this.setPreviousEnabled()
       }
+
+      this.playAnimation()
+    },
+
+    changePortfolioEvery30Seconds() {
+      if (this.getQuantityPortfolioVisible() > this.getQuantityPortfolioFilteredByCategory()){
+        let direction = 'next'
+
+        setInterval(() => {
+          if (this.isNextButtonDisabled()) {
+            direction = 'previous'
+          }
+
+          if (this.isPreviousButtonDisabled()) {
+            direction = 'next'
+          }
+
+          if (direction === 'next') {
+            this.nextPortfolio()
+          }
+
+          if (direction === 'previous') {
+            this.previousPortfolio()
+          }
+        }, 5000)
+      }
+    },
+
+    addAnimation() {
+      this.portfolioSetting.animate = anime({
+        targets: '.portfolio',
+        maxWidth: [0, 100],
+        easing: 'cubicBezier(.5, .05, .1, .3)',
+      })
+    },
+
+    playAnimation() {
+      this.portfolioSetting.animate.play()
     }
   },
 
-  mounted() {
+  async mounted() {
     this.portfolios = Portfolios
 
     this.addCategoriesFromPortfolios()
-    this.addVisiblePortfolios()
-  }
+    this.changePortfolioEvery30Seconds()
+    await this.addVisiblePortfolios()
+
+    this.addAnimation()
+  },
 }
 </script>

@@ -13,12 +13,8 @@
 
         <p class="text-gray-dark text-xl md:text-xl xl:text-4xl font-extrabold | my-2 ">{{ about.name }}</p>
         <p class="text-gray-dark text-xl md:text-xl xl:text-4xl font-extrabold | my-2 ">{{ about.job }}</p>
-        <p class="text-gray-dark text-lg md:text-md xl:text-xl font-medium text-justify | my-8 ">{{
-            changeYearsInDescription(about.description1)
-          }}</p>
-        <p class="text-gray-dark text-lg md:text-md xl:text-xl font-medium text-justify | my-8 ">{{
-            about.description2
-          }}</p>
+        <p class="text-gray-dark text-lg md:text-md xl:text-xl font-medium text-justify | my-8 ">{{ changeYearsInDescription(about.description1) }}</p>
+        <p class="text-gray-dark text-lg md:text-md xl:text-xl font-medium text-justify | my-8 ">{{ about.description2 }}</p>
       </div>
     </div>
 
