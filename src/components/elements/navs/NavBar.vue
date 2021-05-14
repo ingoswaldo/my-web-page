@@ -25,21 +25,21 @@
         </div>
 
         <div class="absolute | inset-y-0 | right-0 | hidden sm:flex items-center | pr-2 | sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <nav-link title="Home" :active="isHomeRoute() || markAsRouteActive('#home')" />
-          <nav-link title="About" :active="markAsRouteActive('#about')" url="#about" />
-          <nav-link title="Services" :active="markAsRouteActive('#services')" url="#services" />
-          <nav-link title="Testimonials" :active="markAsRouteActive('#testimonials')" url="#testimonials" />
-          <nav-link title="portfolio" :active="markAsRouteActive('#portfolio')" url="#portfolio" />
+          <nav-link title="Home" :active="isThisMenuActive('#home')" />
+          <nav-link title="About" :active="isThisMenuActive('#about')" url="#about" />
+          <nav-link title="Services" :active="isThisMenuActive('#services')" url="#services" />
+          <nav-link title="Testimonials" :active="isThisMenuActive('#testimonials')" url="#testimonials" />
+          <nav-link title="portfolio" :active="isThisMenuActive('#portfolio')" url="#portfolio" />
         </div>
       </div>
     </div>
 
     <div class="px-2 pt-2 pb-3 | space-y-1" v-show="showCloseMenuIcon">
-      <nav-link title="Home" :active="isHomeRoute() || markAsRouteActive('#home')"/>
-      <nav-link title="About" :active="markAsRouteActive('#about')" url="#about" />
-      <nav-link title="Services" :active="markAsRouteActive('#services')" url="#services" />
-      <nav-link title="testimonials" :active="markAsRouteActive('#testimonials')" url="#testimonials" />
-      <nav-link title="portfolio" :active="markAsRouteActive('#portfolio')" url="#portfolio" />
+      <nav-link title="Home" :active="isThisMenuActive('#home')" />
+      <nav-link title="About" :active="isThisMenuActive('#about')" url="#about" />
+      <nav-link title="Services" :active="isThisMenuActive('#services')" url="#services" />
+      <nav-link title="Testimonials" :active="isThisMenuActive('#testimonials')" url="#testimonials" />
+      <nav-link title="portfolio" :active="isThisMenuActive('#portfolio')" url="#portfolio" />
     </div>
   </nav>
 </template>
@@ -72,21 +72,9 @@ export default {
       return this.showCloseMenuIcon === false
     },
 
-    isHomeRoute() {
-      return this.getCurrentRouteHash() === ''
-    },
-
-    getCurrentRouteName() {
-      return this.$route.name
-    },
-
-    getCurrentRouteHash() {
-      return this.$route.hash
-    },
-
-    markAsRouteActive(routeName) {
-      return routeName === this.getCurrentRouteName() || routeName === this.getCurrentRouteHash()
-    },
+    isThisMenuActive(menu) {
+      return this.$store.getters.menuActive === menu
+    }
   },
 }
 </script>

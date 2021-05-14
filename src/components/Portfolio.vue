@@ -270,28 +270,32 @@ export default {
       this.playAnimation()
     },
 
-    changePortfolioEvery30Seconds() {
-      if (this.getQuantityPortfolioVisible() > this.getQuantityPortfolioFilteredByCategory()){
-        let direction = 'next'
+    changePortfolioEvery5Seconds() {
+      let direction = 'next'
 
-        setInterval(() => {
-          if (this.isNextButtonDisabled()) {
-            direction = 'previous'
-          }
+      setInterval(() => {
+        if (this.isNextButtonDisabled()) {
+          direction = 'previous'
+        }
 
-          if (this.isPreviousButtonDisabled()) {
-            direction = 'next'
-          }
+        if (this.isPreviousButtonDisabled()) {
+          direction = 'next'
+        }
 
+        if (this.getQuantityPortfolioFilteredByCategory() > this.getQuantityPortfolioVisible()){
           if (direction === 'next') {
             this.nextPortfolio()
+
+            return
           }
 
           if (direction === 'previous') {
             this.previousPortfolio()
+
+            return
           }
-        }, 5000)
-      }
+        }
+      }, 5000)
     },
 
     addAnimation() {
@@ -311,7 +315,7 @@ export default {
     this.portfolios = Portfolios
 
     this.addCategoriesFromPortfolios()
-    this.changePortfolioEvery30Seconds()
+    this.changePortfolioEvery5Seconds()
     await this.addVisiblePortfolios()
 
     this.addAnimation()
