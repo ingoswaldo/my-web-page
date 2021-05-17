@@ -11,7 +11,9 @@
         <h3 class="wrap-text | text-white text-xl md:text-4xl font-bold | my-4 md:my-8">
           <span v-bind:class="isBlankSpace(letter) ? '': 'letter inline-block'" v-for="(letter, index) in slider.description" :key="index">{{ letter }}</span>
         </h3>
-        <Button text="Hire me!" class="hire-me"/>
+        <a href="mailto:info@oswaldomontes.com" class="inline-flex items-center | px-4 py-2 | bg-white | text-blue | hover:opacity-70 | rounded-full | uppercase | focus:outline-none | hire-me">
+          Hire me!
+        </a>
       </div>
 
       <div class="absolute | right-0 | top-72 sm:top-20 md:top-1/3 xl:top-1/4 2xl:top-24 | h-1/3 sm:h-1/2 xl:h-3/5 2xl:h-4/5">
@@ -23,15 +25,11 @@
 
 <script>
 
-import Button from "@/components/elements/Button";
 import anime from "animejs";
 import slider from '@/assets/settings/welcome.json'
 
 export default {
   name: "Welcome",
-  components: {
-    Button
-  },
   data: () => {
     return {
       slider: slider
@@ -70,10 +68,10 @@ export default {
         scale: {
           value: [1, 1.5],
           duration: 1600,
-          delay: 500,
+          delay: 50,
           easing: 'easeInQuad'
         },
-        delay: 250
+        delay: 50
       })
       .add({
         targets: '.hire-me',
@@ -81,10 +79,10 @@ export default {
         scale: {
           value: [1.5, 1],
           duration: 1600,
-          delay: 500,
+          delay: 50,
           easing: 'easeOutQuad'
         },
-        delay: 250
+        delay: 50
       })
     },
 
@@ -112,7 +110,7 @@ export default {
           },
           delay: 250
         })
-    }
+    },
   },
   mounted() {
     this.animateWrappedText()

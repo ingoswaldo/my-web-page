@@ -1,9 +1,7 @@
 <template>
   <div class="max-w-7xl mx-auto mt-8 md:mt-14 | px-2 sm:px-6 lg:px-8 py-2 md:py-14">
-    <h3 class="text-4xl text-blue font-medium" data-aos="zoom-in-right"
-        data-aos-duration="2000">Testimonials</h3>
-    <div class="flex justify-center p-2 md:p-4" data-aos="zoom-in-right"
-         data-aos-duration="2000">
+    <h3 class="text-4xl text-blue font-medium">Testimonials</h3>
+    <div class="flex justify-center p-2 md:p-4">
       <div v-for="(testimonial, index) in testimonials" :key="index" class="w-full md:w-1/3 | p-4 md:p-8 | transition duration-500 ease-in-out"
            @mouseenter="mouseEnterOnTestimonial(index)"
            @mouseleave="mouseLeaveTestimonial()"

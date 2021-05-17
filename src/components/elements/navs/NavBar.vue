@@ -18,7 +18,7 @@
         </div>
 
         <div class="flex-1 flex | items-center justify-center | sm:items-stretch sm:justify-start">
-          <div class="flex-shrink-0 flex items-center">
+          <div class="flex-shrink-0 flex items-center line-drawing-demo">
             <logo class="block lg:hidden | h-12 w-32 | text-white"/>
             <logo class="hidden lg:block | h-16 w-auto | text-white"/>
           </div>

@@ -1,7 +1,6 @@
 <template>
   <div class="flex max-w-7xl mx-auto my-8 md:my-14 | px-2 sm:px-6 lg:px-8">
-    <div class="w-full md:w-1/2 | md:flex-1 md:mx-8" data-aos="zoom-in-right"
-         data-aos-duration="2000">
+    <div class="w-full md:w-1/2 | md:flex-1 md:mx-8">
       <h3 class="text-blue text-4xl font-extrabold">Experience</h3>
       <under-line/>
 

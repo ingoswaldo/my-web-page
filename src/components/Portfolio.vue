@@ -1,11 +1,7 @@
 <template>
   <div class="max-w-7xl mx-auto mt-8 md:mt-14 | px-2 sm:px-6 lg:px-8 py-2 md:py-14">
-    <h3 class="text-4xl text-blue font-medium" data-aos="zoom-in-right"
-        data-aos-duration="2000">Portfolio</h3>
-    <div class="flex flex-row flex-wrap mt-4 mb-16 inset-x-2"
-         data-aos="zoom-in-right"
-         data-aos-duration="2000"
-         data-aos-once="true">
+    <h3 class="text-4xl text-blue font-medium">Portfolio</h3>
+    <div class="flex flex-row flex-wrap mt-4 mb-16 inset-x-2">
       <button
           class="invisible md:visible | text-lg font-medium capitalize | rounded-full | px-4 py-0 | focus:outline-none"
           @click.prevent="setCategorySelect('all')"

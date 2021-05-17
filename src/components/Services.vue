@@ -1,12 +1,9 @@
 <template>
   <div class="bg-blue">
     <div class="max-w-7xl mx-auto mt-8 md:mt-14 | px-2 sm:px-6 lg:px-8 py-2 md:py-14">
-      <h3 class="text-4xl text-white font-medium" data-aos="zoom-in-right"
-          data-aos-duration="2000">Services</h3>
+      <h3 class="text-4xl text-white font-medium" >Services</h3>
       <div class="grid grid-cols-1 md:grid-cols-2">
-        <div class="flex items-center | my-4 md:my-14 | px-2" v-for="(service, index) in services" :key="index"
-             data-aos="zoom-in-right"
-             data-aos-duration="2000">
+        <div class="flex items-center | my-4 md:my-14 | px-2" v-for="(service, index) in services" :key="index">
           <computer-code class="text-white | h-32 w-32" v-if="isComputerCodeIcon(service.icon)"/>
           <mobile class="text-white | h-32 w-32" v-if="isMobileIcon(service.icon)"/>
           <clean-code class="text-white | h-32 w-32" v-if="isCleanCodeIcon(service.icon)"/>

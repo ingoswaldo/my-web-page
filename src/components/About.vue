@@ -1,13 +1,10 @@
 <template>
   <div>
     <div class="block md:flex items-center w-full">
-      <img src="@/assets/images/author.png" class="xl:w-1/2 | object-cover | xl:rounded-r-3xl" data-aos="zoom-in-right"
-           data-aos-duration="2000"/>
+      <img src="@/assets/images/author.png" class="xl:w-1/2 | object-cover | xl:rounded-r-3xl" />
 
       <div
-          class="md:absolute | w-full md:w-1/2 lg:w-1/2 xl:w-2/3 | right-0 | bg-gray-light | md:rounded-l-3xl | px-4 py-12 "
-          data-aos="zoom-in-right"
-          data-aos-duration="2000">
+          class="md:absolute | w-full md:w-1/2 lg:w-1/2 xl:w-2/3 | right-0 | bg-gray-light | md:rounded-l-3xl | px-4 py-12 ">
         <h3 class="text-blue text-4xl font-extrabold">About Me</h3>
         <under-line/>
 
@@ -18,8 +15,7 @@
       </div>
     </div>
 
-    <div class="block md:flex | max-w-7xl mx-auto my-8 md:my-14 | px-2 sm:px-6 lg:px-8" data-aos="zoom-in-right"
-         data-aos-duration="2000">
+    <div class="block md:flex | max-w-7xl mx-auto my-8 md:my-14 | px-2 sm:px-6 lg:px-8">
       <div class="w-full md:w-1/2 | md:flex-1 md:mx-8">
         <h3 class="text-blue text-4xl font-extrabold">Education</h3>
         <under-line/>
