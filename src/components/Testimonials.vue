@@ -1,53 +1,58 @@
 <template>
-  <div class="max-w-7xl mx-auto mt-8 md:mt-14 | px-2 sm:px-6 lg:px-8 py-2 md:py-14">
-    <h3 class="text-4xl text-blue font-medium">Testimonials</h3>
-    <div class="flex justify-center p-2 md:p-4">
-      <div v-for="(testimonial, index) in testimonials" :key="index" class="w-full md:w-1/3 | p-4 md:p-8 | transition duration-500 ease-in-out"
-           @mouseenter="mouseEnterOnTestimonial(index)"
-           @mouseleave="mouseLeaveTestimonial()"
-           v-bind:class="{ 'opacity-50': getTestimonialActive() !== (index + 1), hidden: isNotOnShowSetting(index + 1)}">
-        <img :src="testimonial.imageUrl" v-if="hasImageUrl(testimonial.imageUrl)"
-             class="mx-auto | rounded-full"
-             v-bind:class="getTestimonialActive() === (index + 1) ? 'h-48 w-48' : 'h-40 w-40'" />
-        <div class="mx-auto | bg-blue | rounded-full"
-             v-else
-             v-bind:class="getTestimonialActive() === (index + 1) ? 'h-48 w-48' : 'h-40 w-40'"></div>
-        <div class="pt-6 text-center space-y-4">
-          <div class="text-blue">
-            <p class="font-extrabold" v-bind:class="getTestimonialActive() === (index + 1) ? 'text-2xl' : 'text-xl'">
-              {{ testimonial.name }}
-            </p>
-            <p class="text-gray-dark font-semibold"
-               v-bind:class="getTestimonialActive() === (index + 1) ? 'text-lg' : 'text-md'">{{
-                testimonial.organization
-              }}</p>
+  <Observer @on-change="onChange">
+    <div class="max-w-7xl mx-auto mt-8 md:mt-14 | px-2 sm:px-6 lg:px-8 py-2 md:py-14">
+      <h3 class="testimonial text-4xl text-blue font-medium">Testimonials</h3>
+      <div class="flex justify-center p-2 md:p-4">
+        <div v-for="(testimonial, index) in testimonials" :key="index" class="w-full md:w-1/3 | p-4 md:p-8 | transition duration-500 ease-in-out"
+             @mouseenter="mouseEnterOnTestimonial(index)"
+             @mouseleave="mouseLeaveTestimonial()"
+             v-bind:class="{ 'opacity-50': getTestimonialActive() !== (index + 1), hidden: isNotOnShowSetting(index + 1)}">
+          <img :src="testimonial.imageUrl" v-if="hasImageUrl(testimonial.imageUrl)"
+               class="testimonial mx-auto | rounded-full"
+               v-bind:class="getTestimonialActive() === (index + 1) ? 'h-48 w-48' : 'h-40 w-40'" />
+          <div class="testimonial mx-auto | bg-blue | rounded-full"
+               v-else
+               v-bind:class="getTestimonialActive() === (index + 1) ? 'h-48 w-48' : 'h-40 w-40'"></div>
+          <div class="pt-6 text-center space-y-4">
+            <div class="text-blue">
+              <p class="testimonial font-extrabold" v-bind:class="getTestimonialActive() === (index + 1) ? 'text-2xl' : 'text-xl'">
+                {{ testimonial.name }}
+              </p>
+              <p class="testimonial text-gray-dark font-semibold"
+                 v-bind:class="getTestimonialActive() === (index + 1) ? 'text-lg' : 'text-md'">{{
+                  testimonial.organization
+                }}</p>
+            </div>
+            <blockquote>
+              <p class="testimonial text-gray-dark font-semibold"
+                 v-bind:class="getTestimonialActive() === (index + 1) ? 'text-xl' : 'text-lg'">“ {{
+                  testimonial.comments
+                }}”</p>
+            </blockquote>
           </div>
-          <blockquote>
-            <p class="text-gray-dark font-semibold"
-               v-bind:class="getTestimonialActive() === (index + 1) ? 'text-xl' : 'text-lg'">“ {{
-                testimonial.comments
-              }}”</p>
-          </blockquote>
         </div>
       </div>
+      <div class="flex justify-center | pt-6">
+        <button class="testimonial mx-1 | w-4 h-4 | rounded-full | focus-within:outline-none"
+                v-for="(testimonial, index) in testimonials"
+                :key="index"
+                v-bind:class="getTestimonialActive() === (index + 1) ? 'bg-blue' : 'border-2 border-blue'"
+                @click="setTestimonialSettingActive(index + 1)"></button>
+      </div>
     </div>
-    <div class="flex justify-center | pt-6">
-      <button class="mx-1 | w-4 h-4 | rounded-full | focus-within:outline-none"
-              v-for="(testimonial, index) in testimonials"
-              :key="index"
-              v-bind:class="getTestimonialActive() === (index + 1) ? 'bg-blue' : 'border-2 border-blue'"
-              @click="setTestimonialSettingActive(index + 1)"></button>
-    </div>
-  </div>
+  </Observer>
 </template>
 
 <script>
 import Testimonials from "@/assets/settings/testimonials.json"
+import Observer from "vue-intersection-observer";
+import anime from "animejs";
 
 export default {
   name: "Testimonials",
-  data: () => {
+  data() {
     return {
+      animation: null,
       testimonials: Testimonials,
       testimonialSetting: {
         isAnimationPaused: false,
@@ -60,6 +65,9 @@ export default {
         showItems: []
       }
     }
+  },
+  components: {
+    Observer
   },
   methods: {
     isOnMobile() {
@@ -153,12 +161,32 @@ export default {
 
     mouseLeaveTestimonial() {
       this.testimonialSetting.isAnimationPaused = false
-    }
+    },
+
+    playAnimation() {
+      this.animation.play()
+    },
+
+    onChange(entry) {
+      if (entry.isIntersecting){
+        this.playAnimation()
+      }
+    },
   },
 
   mounted() {
     this.addVisibleTestimonials()
     this.changeTestimonialEvery30Seconds()
+
+    this.animation = anime({
+      targets: '.testimonial',
+      scale: [0, 1],
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 1500,
+      delay: anime.stagger(200),
+      autoplay: false
+    }, '-=500')
   }
 }
 </script>

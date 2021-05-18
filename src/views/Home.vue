@@ -3,9 +3,9 @@
     <Observer @on-change="onChangeHome">
       <div class="max-w-7xl mx-auto my-14 | px-2 sm:px-6 lg:px-8">
         <div class="flex flex-wrap justify-between">
-          <card-icon class="w-full md:w-72 xl:w-80" title="6" subtitle="Happy Clients" />
-          <card-icon class="w-full md:w-72 xl:w-80" title="6" subtitle="Years of Experience" icon="signal"/>
-          <card-icon class="w-full md:w-72 xl:w-80" title="6" subtitle="Projects Done" icon="file-check"/>
+          <card-icon class="welcome-icon w-full md:w-72 xl:w-80" title="6" subtitle="Happy Clients" />
+          <card-icon class="welcome-icon w-full md:w-72 xl:w-80" title="6" subtitle="Years of Experience" icon="signal"/>
+          <card-icon class="welcome-icon w-full md:w-72 xl:w-80" title="6" subtitle="Projects Done" icon="file-check"/>
         </div>
       </div>
     </Observer>
@@ -36,6 +36,7 @@ import Services from "@/components/Services";
 import Comments from "@/components/Testimonials";
 import Portfolio from "@/components/Portfolio";
 import Observer from 'vue-intersection-observer'
+import anime from "animejs";
 
 export default {
   name: 'Home',
@@ -47,10 +48,16 @@ export default {
     CardIcon,
     Observer
   },
+  data() {
+    return {
+      animation: null
+    }
+  },
   methods: {
     onChangeHome(entry) {
       if (entry.isIntersecting){
         this.setMenuActive('#home')
+        this.playAnimation()
       }
     },
 
@@ -80,7 +87,22 @@ export default {
 
     setMenuActive(menu) {
       this.$store.commit('setMenuActive', menu)
-    }
+    },
+
+    playAnimation() {
+      this.animation.play()
+    },
+  },
+  mounted() {
+    this.animation = anime({
+      targets: '.welcome-icon',
+      scale: [0, 1],
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 1500,
+      delay: anime.stagger(200),
+      autoplay: false
+    }, '-=500')
   }
 }
 </script>

@@ -7,11 +7,15 @@
         <div class="block 2xl:flex 2xl:flex-col">
           <div class="flex | my-2">
             <location class="text-blue | w-14 h-14"/>
-            <h3 class="text-blue font-medium text-xl | mx-2">Sincelejo, Colombia</h3>
+            <h3 class="footer-text text-blue font-medium text-xl | mx-2">
+              <text-animated :text="city" animation="rain" parent-class="footer-text" />
+            </h3>
           </div>
           <div class="flex | my-2 mx-auto">
             <email class="text-blue | w-14 h-14"/>
-            <h3 class="text-blue font-medium text-xl | mx-2">info@oswaldomontes.com</h3>
+            <h3 class="footer-text text-blue font-medium text-xl | mx-2">
+              <text-animated :text="email" animation="rain" parent-class="footer-text" />
+            </h3>
           </div>
         </div>
       </div>
@@ -23,16 +27,21 @@
 import Logo from "@/components/icons/Logo";
 import Location from "@/components/icons/Location";
 import Email from "@/components/icons/Email";
+import TextAnimated from "@/components/elements/TextAnimated";
 
 export default {
   name: "Footer",
   components: {
+    TextAnimated,
     Email,
     Location,
     Logo
   },
-  methods: {
-
-  }
+  data: () => {
+    return {
+      city: 'Sincelejo, Colombia',
+      email: 'info@oswaldomontes.com'
+    }
+  },
 }
 </script>

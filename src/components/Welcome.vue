@@ -2,14 +2,14 @@
   <div class="max-w-7xl mx-auto my-16 md:my-32 | px-2 sm:px-6 lg:px-8">
     <div class="flex items-center">
       <div class="flex-1 | text-center sm:text-left">
-        <h3 class="wrap-text text-white text-2xl md:text-4xl font-extrabold | my-0 md:my-1">
-          <span v-bind:class="isBlankSpace(letter) ? '': 'letter inline-block'" v-for="(letter, index) in slider.hello" :key="index">{{ letter }}</span>
+        <h3 class="welcome-text text-white text-2xl md:text-4xl font-extrabold | my-0 md:my-1">
+          <text-animated :text="slider.hello" parent-class="welcome-text" />
         </h3>
-        <h1 class="wrap-text text-white text-4xl md:text-7xl font-extrabold | my-4 md:my-8">
-          <span v-bind:class="isBlankSpace(letter) ? '': 'letter inline-block'" v-for="(letter, index) in slider.name" :key="index">{{ letter }}</span>
+        <h1 class="welcome-text text-white text-4xl md:text-7xl font-extrabold | my-4 md:my-8">
+          <text-animated :text="slider.name" parent-class="welcome-text" />
         </h1>
-        <h3 class="wrap-text | text-white text-xl md:text-4xl font-bold | my-4 md:my-8">
-          <span v-bind:class="isBlankSpace(letter) ? '': 'letter inline-block'" v-for="(letter, index) in slider.description" :key="index">{{ letter }}</span>
+        <h3 class="welcome-text | text-white text-xl md:text-4xl font-bold | my-4 md:my-8">
+          <text-animated :text="slider.description" parent-class="welcome-text" />
         </h3>
         <a href="mailto:info@oswaldomontes.com" class="inline-flex items-center | px-4 py-2 | bg-white | text-blue | hover:opacity-70 | rounded-full | uppercase | focus:outline-none | hire-me">
           Hire me!
@@ -27,39 +27,17 @@
 
 import anime from "animejs";
 import slider from '@/assets/settings/welcome.json'
+import TextAnimated from "@/components/elements/TextAnimated";
 
 export default {
   name: "Welcome",
+  components: {TextAnimated},
   data: () => {
     return {
       slider: slider
     }
   },
   methods: {
-    isBlankSpace(letter) {
-      return letter === ' '
-    },
-
-    animateWrappedText() {
-      anime.timeline({loop: true})
-          .add({
-            targets: '.wrap-text .letter',
-            scale: [4, 1],
-            opacity: [0, 1],
-            translateZ: 0,
-            easing: "easeOutExpo",
-            duration: 950,
-            delay: (el, i) => 70 * i
-          })
-          .add({
-            targets: '.wrap-text',
-            opacity: 0,
-            duration: 1000,
-            easing: "easeOutExpo",
-            delay: 1000
-          });
-    },
-
     animateHireMeButton() {
       anime.timeline({loop: true})
       .add({
@@ -113,7 +91,6 @@ export default {
     },
   },
   mounted() {
-    this.animateWrappedText()
     this.animateHireMeButton()
     this.animateSliderImages()
   }

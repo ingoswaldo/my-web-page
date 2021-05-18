@@ -6,19 +6,19 @@
   "education": [
     {
       "title": "CQRS",
-      "description": "Command Query Responsibility Segregation Course in CodelyTV."
+      "description": "Course at CodelyTV."
     },
     {
       "title": "Hexagonal Architecture",
-      "description": "Hexagonal Architecture Course in CodelyTV."
+      "description": "Course at CodelyTV."
     },
     {
       "title": "Mobile Devices",
-      "description": "Certified in Mobile Devices with 120 hours as hourly intensity."
+      "description": "Certified with 120 hours as hourly intensity."
     },
     {
-      "title": "Computer Engineering",
-      "description": "Science in Computer Engineering at CECAR - Corporación Unversitaria del Caribe."
+      "title": "System Engineer",
+      "description": "Bachelor Degree at Corporación Universitaria del Caribe - CECAR."
     }
   ],
   "skills": {
