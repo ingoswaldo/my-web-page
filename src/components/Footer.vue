@@ -30,6 +30,9 @@ export default {
     Email,
     Location,
     Logo
+  },
+  methods: {
+
   }
 }
 </script>
