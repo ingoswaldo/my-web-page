@@ -28,7 +28,7 @@
           <nav-link title="Home" :active="isThisMenuActive('#home')" />
           <nav-link title="About" :active="isThisMenuActive('#about')" url="#about" />
           <nav-link title="Services" :active="isThisMenuActive('#services')" url="#services" />
-          <nav-link title="Testimonials" :active="isThisMenuActive('#testimonials')" url="#testimonials" />
+          <nav-link title="Testimonials" :active="isThisMenuActive('#testimonials')" url="#testimonials" v-if="hasTestimonials()" />
           <nav-link title="portfolio" :active="isThisMenuActive('#portfolio')" url="#portfolio" />
         </div>
       </div>
@@ -38,7 +38,7 @@
       <nav-link title="Home" :active="isThisMenuActive('#home')" />
       <nav-link title="About" :active="isThisMenuActive('#about')" url="#about" />
       <nav-link title="Services" :active="isThisMenuActive('#services')" url="#services" />
-      <nav-link title="Testimonials" :active="isThisMenuActive('#testimonials')" url="#testimonials" />
+      <nav-link title="Testimonials" :active="isThisMenuActive('#testimonials')" url="#testimonials" v-if="hasTestimonials()" />
       <nav-link title="portfolio" :active="isThisMenuActive('#portfolio')" url="#portfolio" />
     </div>
   </nav>
@@ -47,6 +47,7 @@
 <script>
 import Logo from "@/components/icons/Logo";
 import NavLink from "@/components/elements/navs/NavLink";
+import TestimonialsArray from "@/assets/settings/testimonials.json"
 
 export default {
   name: "NavBar",
@@ -74,6 +75,10 @@ export default {
 
     isThisMenuActive(menu) {
       return this.$store.getters.menuActive === menu
+    },
+
+    hasTestimonials() {
+      return TestimonialsArray.length > 0
     }
   },
 }

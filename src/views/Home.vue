@@ -18,7 +18,7 @@
       <services id="services" />
     </Observer>
 
-    <Observer @on-change="onChangeComments">
+    <Observer @on-change="onChangeComments" v-if="hasTestimonials()">
       <comments id="testimonials" />
     </Observer>
 
@@ -37,6 +37,7 @@ import Comments from "@/components/Testimonials";
 import Portfolio from "@/components/Portfolio";
 import Observer from 'vue-intersection-observer'
 import anime from "animejs";
+import TestimonialsArray from "@/assets/settings/testimonials.json"
 
 export default {
   name: 'Home',
@@ -92,6 +93,10 @@ export default {
     playAnimation() {
       this.animation.play()
     },
+
+    hasTestimonials() {
+      return TestimonialsArray.length > 0
+    }
   },
   mounted() {
     this.animation = anime({
