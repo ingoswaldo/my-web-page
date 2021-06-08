@@ -27,7 +27,10 @@ export default {
   },
   metaInfo: {
     title: 'Oswaldo Montes',
-    titleTemplate: '%s | Senior Web Developer'
+    titleTemplate: '%s | Senior Web Developer',
+    meta: [
+      { description: 'Senior Web Developer with experience coding in HTML, CSS, Bootstrap, Tailwind, JavaScript, Vue, PHP, Laravel, Wordpress and even more...' }
+    ]
   }
 }
 </script>
