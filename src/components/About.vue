@@ -2,7 +2,7 @@
   <div>
     <Observer @on-change="onChangeImage">
       <div id="me" class="block md:flex items-center w-full">
-        <img src="@/assets/images/author.png" class="me xl:w-1/2 | object-cover | xl:rounded-r-3xl" />
+        <img src="@/assets/images/author.jpg" class="me xl:w-1/2 | object-cover | xl:rounded-r-3xl" />
 
         <div
             class="md:absolute | w-full md:w-1/2 lg:w-1/2 xl:w-2/3 | right-0 | bg-gray-light | md:rounded-l-3xl | px-4 py-12 ">

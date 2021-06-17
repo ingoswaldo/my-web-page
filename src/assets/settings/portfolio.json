@@ -2,27 +2,27 @@
   {
     "title": "Caribbean Ticket Shop",
     "type": "e-commerce",
-    "imageUrl": "caribbeanticketshop.png"
+    "imageUrl": "caribbeanticketshop.jpg"
   },
   {
     "title": "Missann Boat Trips",
     "type": "e-commerce",
-    "imageUrl": "missannboattrips.png"
+    "imageUrl": "missannboattrips.jpg"
   },
   {
     "title": "Sincelejo Urbano",
     "type": "government",
-    "imageUrl": "sincelejo-urbano.png"
+    "imageUrl": "sincelejo-urbano.jpg"
   },
   {
     "title": "Ced Sucre",
     "type": "government",
-    "imageUrl": "cedsucre.png"
+    "imageUrl": "cedsucre.jpg"
   },
   {
     "title": "Ondas Sucre",
     "type": "scholar",
-    "imageUrl": "ondas.png"
+    "imageUrl": "ondas.jpg"
   },
   {
     "title": "Metro Sabanas",
@@ -38,5 +38,10 @@
     "title": "Buzip",
     "type": "stats",
     "imageUrl": "buzip.png"
+  },
+  {
+    "title": "Debtcleanse",
+    "type": "landing pages",
+    "imageUrl": "debtcleanse.jpg"
   }
 ]

@@ -1,6 +1,6 @@
 <template>
   <div class="bg-gray-light mt-4 md:mt-40">
-    <img src="@/assets/images/author.png" class="invisible md:visible absolute | h-1/4 lg:h-1/3 xl:h-2/5 | right-4 md:right-8 | -mt-2 md:-mt-12 | object-cover | rounded-2xl xl:rounded-3xl"/>
+    <img src="@/assets/images/author.jpg" class="invisible md:visible absolute | h-1/4 lg:h-1/3 xl:h-2/5 | right-4 md:right-8 | -mt-2 md:-mt-12 | object-cover | rounded-2xl xl:rounded-3xl"/>
     <div class="max-w-7xl mt-0 md:mt-16 | px-8 py-2 md:py-14">
       <div class="block 2xl:flex 2xl:justify-around items-center | h-60 lg:h-72 xl:h-80">
         <logo class="w-80 | text-blue | my-2"/>
