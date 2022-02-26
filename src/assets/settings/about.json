@@ -1,16 +1,16 @@
 {
   "name": "Oswaldo Montes",
-  "job": "Senior Web Developer",
-  "description1": "I'm a web developer with :years of experience building generic and custom web applications in different business environments.",
-  "description2": "I'm very responsible with the assumed compromises, with capacity to work individually or in team, proactive and ready to learn new skills from the assigned tasks to be at the head of the technological advances.",
+  "job": "Software Engineer",
+  "description1": "I'm a software engineer with :years of experience building generic and custom web applications in different business environments globally.",
+  "description2": "I'm very responsible with assumed compromises, with ability to work individually or in a team, proactive and willing to learn new skills from assigned tasks to be at the forefront of technological advances.",
   "education": [
     {
       "title": "CQRS",
-      "description": "Course at CodelyTV."
+      "description": "Course on CodelyTV."
     },
     {
       "title": "Hexagonal Architecture",
-      "description": "Course at CodelyTV."
+      "description": "Course on CodelyTV."
     },
     {
       "title": "Mobile Devices",
@@ -67,53 +67,60 @@
   },
   "jobs": [
     {
+      "title": "Mid PHP Developer",
+      "start_year": "2021",
+      "end_year": "Today",
+      "organization":  "Koombea",
+      "description": "Software Engineer to build and to add new features in some USA business environments."
+    },
+    {
       "title": "Software Developer",
       "start_year": "2020",
-      "end_year": "Today",
+      "end_year": "2021",
       "organization":  "Solvo Global",
-      "description": "Web developer to build and to add new features in USA business environments."
+      "description": "Web developer to build and to add new features in some USA business environments."
     },
     {
       "title": "Web Developer",
       "start_year": "2016",
       "end_year": "2020",
       "organization":  "Creativos Tecnologicos IT",
-      "description": "Web developer to build web applications in Colombia business environments."
+      "description": "Web developer to build web applications in different Colombia business environments."
     },
     {
       "title": "Web Developer",
       "start_year": "2017",
       "end_year": "2020",
       "organization":  "OnlinePayCaribe",
-      "description": "Web developer for online ticketing web applications."
+      "description": "Web developer to add new features to online ticketing web applications."
     },
     {
       "title": "Web Developer",
       "start_year": "2019",
       "end_year": "2019",
       "organization":  "CECAR",
-      "description": "Web developer for update a web application for the use of research as a pedagogical strategy for children and adolescents working with the ONDAS SUCRE project."
+      "description": "Web developer to update a web application for the use of research as a pedagogical strategy for children and adolescents working with the ONDAS SUCRE project."
     },
     {
       "title": "Web Developer",
       "start_year": "2018",
       "end_year": "2019",
       "organization":  "Zuomy Software",
-      "description": "Web developer for build of an electronic invoicing system."
+      "description": "Web developer to build an electronic invoicing system."
     },
     {
       "title": "Web Developer",
       "start_year": "2016",
       "end_year": "2017",
       "organization":  "CECAR",
-      "description": "Web developer for build a web application for the use of research as a pedagogical strategy for children and adolescents working with the ONDAS SUCRE project."
+      "description": "Web developer to build a web application for the use of research as a pedagogical strategy for children and adolescents working with the ONDAS SUCRE project."
     },
     {
       "title": "Web Developer",
       "start_year": "2014",
       "end_year": "2015",
       "organization":  "Fundimur",
-      "description": "Web developer for build a web application to help the critical thinking of students from different educational institutions of the SUCRE department."
+      "description": "Web developer to build a web application to help the critical thinking of students from different educational institutions of the SUCRE department."
     }
   ]
 }
