@@ -38,10 +38,10 @@
     ],
     "backend": [
       {
-        "title": "PHP"
+        "title": "Ruby on Rails"
       },
       {
-        "title": "Laravel"
+        "title": "PHP / Laravel"
       },
       {
         "title": "Wordpress"
@@ -67,7 +67,7 @@
   },
   "jobs": [
     {
-      "title": "Mid PHP Developer",
+      "title": "Mid Backend Developer",
       "start_year": "2021",
       "end_year": "Today",
       "organization":  "Koombea",

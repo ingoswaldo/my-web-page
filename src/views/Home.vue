@@ -3,9 +3,9 @@
     <Observer @on-change="onChangeHome">
       <div class="max-w-7xl mx-auto my-14 | px-2 sm:px-6 lg:px-8">
         <div class="flex flex-wrap justify-between">
-          <card-icon class="welcome-icon w-full md:w-72 xl:w-80" title="6" subtitle="Happy Clients" />
-          <card-icon class="welcome-icon w-full md:w-72 xl:w-80" title="6" subtitle="Years of Experience" icon="signal"/>
-          <card-icon class="welcome-icon w-full md:w-72 xl:w-80" title="6" subtitle="Projects Done" icon="file-check"/>
+          <card-icon class="welcome-icon w-full md:w-72 xl:w-80" title="10" subtitle="Happy Clients" />
+          <card-icon class="welcome-icon w-full md:w-72 xl:w-80" v-bind:title="getYearsOfExperience()" subtitle="Years of Experience" icon="signal"/>
+          <card-icon class="welcome-icon w-full md:w-72 xl:w-80" title="20" subtitle="Projects Done" icon="file-check"/>
         </div>
       </div>
     </Observer>
@@ -55,6 +55,11 @@ export default {
     }
   },
   methods: {
+    getYearsOfExperience(){
+      let yearsInMilliseconds = Math.abs(new Date('2016-01-01') - new Date())
+
+      return Math.floor(yearsInMilliseconds / (1000 * 3600 * 24 * 365) + 0.75) //0.75 = 9 month worked before 2016-01-01
+    },
     onChangeHome(entry) {
       if (entry.isIntersecting){
         this.setMenuActive('#home')
