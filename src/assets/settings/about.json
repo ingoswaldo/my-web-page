@@ -1,8 +1,8 @@
 {
   "name": "Oswaldo Montes",
   "job": "Software Engineer",
-  "description1": "I'm a software engineer with :years of experience building generic and custom web applications in different business environments globally.",
-  "description2": "I'm very responsible with assumed compromises, with ability to work individually or in a team, proactive and willing to learn new skills from assigned tasks to be at the forefront of technological advances.",
+  "description1": "I'm a software engineer with :years of experience building, maintaining and testing web applications in different business environments for some countries in the Americas.",
+  "description2": "I'm responsible and commitment software engineer, with ability to work individually or in a team, proactive and focus on keep growing as professional and maintaining long relationships with my clients.",
   "education": [
     {
       "title": "CQRS",
@@ -58,7 +58,7 @@
         "title": "Team Work"
       },
       {
-        "title": "Dedication"
+        "title": "Commitment"
       },
       {
         "title": "Adaptability"
@@ -69,58 +69,58 @@
     {
       "title": "Mid Backend Developer",
       "start_year": "2021",
-      "end_year": "Today",
+      "end_year": "2024",
       "organization":  "Koombea",
-      "description": "Software Engineer to build and to add new features in some USA business environments."
+      "description": "Building web apps from scratch, maintaining production web apps, testing, modeling databases (ERD)."
     },
     {
       "title": "Software Developer",
       "start_year": "2020",
       "end_year": "2021",
       "organization":  "Solvo Global",
-      "description": "Web developer to build and to add new features in some USA business environments."
+      "description": "Building web apps from scratch, maintaining production web apps, testing and modeling databases (ERD)."
     },
     {
       "title": "Web Developer",
       "start_year": "2016",
       "end_year": "2020",
-      "organization":  "Creativos Tecnologicos IT",
-      "description": "Web developer to build web applications in different Colombia business environments."
+      "organization":  "Creativos Tecnológicos IT",
+      "description": "Building web apps from scratch and modeling databases (ERD)."
     },
     {
       "title": "Web Developer",
       "start_year": "2017",
       "end_year": "2020",
       "organization":  "OnlinePayCaribe",
-      "description": "Web developer to add new features to online ticketing web applications."
+      "description": "Maintaining production web apps."
     },
     {
       "title": "Web Developer",
       "start_year": "2019",
       "end_year": "2019",
       "organization":  "CECAR",
-      "description": "Web developer to update a web application for the use of research as a pedagogical strategy for children and adolescents working with the ONDAS SUCRE project."
+      "description": "Building web apps from scratch and modeling databases (ERD)."
     },
     {
       "title": "Web Developer",
       "start_year": "2018",
       "end_year": "2019",
       "organization":  "Zuomy Software",
-      "description": "Web developer to build an electronic invoicing system."
+      "description": "Building web apps from scratch and modeling databases (ERD)."
     },
     {
       "title": "Web Developer",
       "start_year": "2016",
       "end_year": "2017",
       "organization":  "CECAR",
-      "description": "Web developer to build a web application for the use of research as a pedagogical strategy for children and adolescents working with the ONDAS SUCRE project."
+      "description": "Building web apps from scratch and modeling databases (ERD)."
     },
     {
       "title": "Web Developer",
       "start_year": "2014",
       "end_year": "2015",
       "organization":  "Fundimur",
-      "description": "Web developer to build a web application to help the critical thinking of students from different educational institutions of the SUCRE department."
+      "description": "Building web apps from scratch and modeling databases (ERD)."
     }
   ]
 }
