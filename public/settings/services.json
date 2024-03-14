@@ -1,0 +1,18 @@
+{
+  "development": {
+    "title": "Custom Web Application Development",
+    "description": "I'm skilled at creating robust web applications with PHP (Laravel) and Ruby on Rails. I specialize in custom solutions that meet individual client needs. My goal is to deliver high-quality web applications that drive business success."
+  },
+  "optimization": {
+    "title": "System Optimization and Efficiency Enhancement",
+    "description": "I'm skilled at analyzing and improving existing systems to boost efficiency. I implement solutions that enhance speed, scalability, and security. My goal is to deliver optimized systems that surpass client expectations and achieve tangible results."
+  },
+  "design": {
+    "title": "Interactive Frontend Design and Development",
+    "description": "I specialize in creating user-friendly interfaces using JavaScript (Vue.js) and other frontend tools. My aim is to design intuitive layouts that boost brand appeal."
+  },
+  "consulting": {
+    "title": "Technical Consulting and Advisory Services",
+    "description": "I offer expert advice on technology, software architecture, and development best practices. I provide strategic insights and problem-solving expertise for software projects. Committed to helping clients use technology effectively and stay competitive."
+  }
+}
