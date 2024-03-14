@@ -38,27 +38,43 @@ export default {
           '0%, 100%': { transform: 'scale(1)' },
           '50%': { transform: 'scale(1.1)' },
         },
-        zoomInDown: {
+        leftRight: {
+          '40%': {
+            transform: 'translate(50px, 0) scale(.7)',
+            opacity: 1
+          },
+          '80%': {
+            transform: 'translate(0) scale(2)',
+            opacity: 0
+          },
+          '100%': {
+            transform: 'translate(0) scale(1)',
+            opacity: 1
+          },
+        },
+        twister: {
+          '10%': { opacity: 1 },
+          '100%': {
+            transform: 'rotate(0deg) translate(0)',
+            opacity: 1
+          },
+        },
+        reveal: {
           from: {
             opacity: 0,
-            transform: 'scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)',
-            'animation-timing-function': 'cubic-bezier(0.55, 0.055, 0.675, 0.19)'
+            transform: 'perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg)'
           },
-          '60%': {
+          to: {
             opacity: 1,
-            transform: 'scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)',
-            'animation-timing-function': 'cubic-bezier(0.175, 0.885, 0.32, 1)'
+            transform: 'perspective(500px) translate3d(0, 0, 0)'
           }
-        },
-        infiniteScroll: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
         }
       },
       animation: {
         heart: 'heart 1s infinite',
-        'zoom-in-down': 'zoomInDown 1s infinite',
-        'infinite-scroll': 'infiniteScroll 20s linear infinite'
+        twister: 'twister .5s forwards',
+        reveal: 'reveal 1s ease-out 1 both',
+        'left-right': 'leftRight .5s forwards',
       }
     },
   },

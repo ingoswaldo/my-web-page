@@ -16,6 +16,6 @@ import PortfolioSection from "@/views/sections/PortfolioSection.vue";
   <knowledge-section />
   <experience-section />
   <services-section id="services" />
-  <portfolio-section id="portfolio" />
+  <portfolio-section />
   <footer-section />
 </template>

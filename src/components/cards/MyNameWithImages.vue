@@ -4,6 +4,8 @@ import {fetchSetting} from "@/helpers/fetch.js";
 import {getImageURL} from "@/helpers/images.js";
 import {useIntersectionObserver} from "@vueuse/core";
 import {useGlobalState} from "@/store.js";
+import TextWithTwisterAnimation from "@/components/texts/TextWithTwisterAnimation.vue";
+import TextWithLeftRightAnimation from "@/components/texts/TextWithLeftRightAnimation.vue";
 
 const presentation =  ref({})
 const presentationName =  ref(null)
@@ -25,12 +27,14 @@ useIntersectionObserver(presentationName, ([{ isIntersecting }]) => {
   <div class="max-w-7xl mx-auto my-16 md:my-32 | px-2 sm:px-6 lg:px-8">
     <div class="flex items-center">
       <div class="flex-1 | text-center sm:text-left">
-        <h3 class="text-white text-2xl md:text-4xl font-extrabold | my-0 md:my-1">{{ presentation.greeting }}</h3>
+        <h3 class="text-white text-2xl md:text-4xl font-extrabold | my-0 md:my-1">
+          <text-with-twister-animation :text="presentation.greeting" />
+        </h3>
         <h1 ref="presentationName" class="text-white text-4xl md:text-7xl font-extrabold | my-4 md:my-8">
-          {{ presentation.name }}
+          <text-with-left-right-animation :text="presentation.name" />
         </h1>
         <h3 class="text-white text-xl md:text-4xl font-bold | my-4 md:my-8">
-          {{ presentation.role }}
+          <text-with-twister-animation :text="presentation.role" />
         </h3>
         <a href="mailto:info@oswaldomontes.com" class="inline-flex items-center | px-4 py-2 | bg-white | text-blue | hover:opacity-70 | rounded-full | uppercase | focus:outline-none | animate-heart">
           Hire me!
