@@ -8,29 +8,19 @@ import ComputerCodeIcon from "@/components/icons/ComputerCodeIcon.vue";
 import MobileIcon from "@/components/icons/MobileIcon.vue";
 import CleanCodeIcon from "@/components/icons/CleanCodeIcon.vue";
 import UserInterfaceIcon from "@/components/icons/UserInterfaceIcon.vue";
-import {useIntersectionObserver} from "@vueuse/core";
-import {useGlobalState} from "@/store.js";
 
 const service =  ref({})
-const serviceDevelopment =  ref(null)
-const state = useGlobalState()
 
 onBeforeMount(() => {
   fetchSetting('services.json')
       .then(response => service.value = response)
-})
-
-useIntersectionObserver(serviceDevelopment, ([{ isIntersecting }]) => {
-  if (!isIntersecting) return
-
-  state.menuActive.value = '#services'
 })
 </script>
 
 <template>
   <card-with-blue-background title="Services">
     <div class="grid grid-cols-1 md:grid-cols-2">
-      <card-with-items-centered ref="serviceDevelopment" :title="service.development?.title" :description="service.development?.description">
+      <card-with-items-centered :title="service.development?.title" :description="service.development?.description">
         <template #icon>
           <computer-code-icon class="text-white | h-32 w-32" />
         </template>

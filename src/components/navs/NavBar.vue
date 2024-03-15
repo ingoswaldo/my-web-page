@@ -51,14 +51,14 @@ const isCloseMenuIconHidden = () => {
               url="#about"
           />
           <nav-link
-              title="Services"
-              :active="isServiceActive()"
-              url="#services"
-          />
-          <nav-link
               title="portfolio"
               :active="isPortfolioActive()"
               url="#portfolio"
+          />
+          <nav-link
+              title="Services"
+              :active="isServiceActive()"
+              url="#services"
           />
         </div>
       </div>
@@ -76,14 +76,14 @@ const isCloseMenuIconHidden = () => {
           url="#about"
       />
       <nav-link
-          title="Services"
-          :active="isServiceActive()"
-          url="#services"
-      />
-      <nav-link
           title="portfolio"
           :active="isPortfolioActive()"
           url="#portfolio"
+      />
+      <nav-link
+          title="Services"
+          :active="isServiceActive()"
+          url="#services"
       />
     </div>
   </nav>

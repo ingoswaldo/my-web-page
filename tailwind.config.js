@@ -56,7 +56,8 @@ export default {
           '10%': { opacity: 1 },
           '100%': {
             transform: 'rotate(0deg) translate(0)',
-            opacity: 1
+            opacity: 1,
+            animationDelay: '2s'
           },
         },
         reveal: {
@@ -66,15 +67,15 @@ export default {
           },
           to: {
             opacity: 1,
-            transform: 'perspective(500px) translate3d(0, 0, 0)'
+            transform: 'perspective(500px) translate3d(0, 0, 0)',
           }
-        }
+        },
       },
       animation: {
-        heart: 'heart 1s infinite',
-        twister: 'twister .5s forwards',
+        heart: 'heart 2s infinite',
+        twister: 'twister 1s forwards',
         reveal: 'reveal 1s ease-out 1 both',
-        'left-right': 'leftRight .5s forwards',
+        'left-right': 'leftRight 1s forwards',
       }
     },
   },
