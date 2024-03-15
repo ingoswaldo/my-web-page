@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Curbsidesos",
+    "type": "routing",
+    "imageName": "curbsidesos.png"
+  },
+  {
+    "title": "Soorse",
+    "type": "social",
+    "imageName": "soorse.png"
+  },
+  {
+    "title": "Vation Ventures",
+    "type": "stats",
+    "imageName": "vation.jpg"
+  },
+  {
+    "title": "Debtcleanse",
+    "type": "landing pages",
+    "imageName": "debtcleanse.jpg"
+  },
+  {
+    "title": "Caribbean Ticket Shop",
+    "type": "e-commerce",
+    "imageName": "caribbeanticketshop.jpg"
+  },
+  {
+    "title": "Missann Boat Trips",
+    "type": "e-commerce",
+    "imageName": "missannboattrips.jpg"
+  },
+  {
+    "title": "Ondas Sucre",
+    "type": "scholar",
+    "imageName": "ondas.jpg"
+  },
+  {
+    "title": "Sincelejo Urbano",
+    "type": "government",
+    "imageName": "sincelejo-urbano.jpg"
+  },
+  {
+    "title": "Ced Sucre",
+    "type": "government",
+    "imageName": "cedsucre.jpg"
+  }
+]

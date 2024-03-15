@@ -1,0 +1,55 @@
+@import 'base.css';
+
+.job-right, .job-left {
+    position: relative;
+    background: #4c6cab;
+}
+
+.job-right:before, .job-left:before {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(194, 225, 245, 0);
+    border-width: 0.8em;
+}
+
+.job-right:before {
+    right: 100%;
+    top: 40%;
+    border-right-color: #4c6cab;
+}
+
+.job-left:before {
+    left: 100%;
+    top: 40%;
+    border-left-color: #4c6cab;
+}
+
+.bounce-enter-active {
+    animation: bounce 2s;
+}
+.bounce-leave-active {
+    animation: bounce .5s reverse;
+}
+@keyframes bounce {
+    10% {
+        transform: scale(1, 0.002);
+    }
+    35% {
+        transform: scale(0.2, 0.002);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.2, 0.002);
+        opacity: 0;
+    }
+    85% {
+        transform: scale(1, 0.002);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}

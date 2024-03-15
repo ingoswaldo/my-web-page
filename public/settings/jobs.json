@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Mid Backend Developer",
+    "start_year": "2021",
+    "end_year": "2024",
+    "organization":  "Koombea",
+    "description": "Building web apps from scratch, maintaining production web apps, testing and modeling databases (ERD)."
+  },
+  {
+    "title": "Software Developer",
+    "start_year": "2020",
+    "end_year": "2021",
+    "organization":  "Solvo Global",
+    "description": "Building web apps from scratch, maintaining production web apps, testing and modeling databases (ERD)."
+  },
+  {
+    "title": "Web Developer",
+    "start_year": "2016",
+    "end_year": "2020",
+    "organization":  "Creativos Tecnológicos IT",
+    "description": "Building web apps from scratch and modeling databases (ERD)."
+  },
+  {
+    "title": "Web Developer",
+    "start_year": "2017",
+    "end_year": "2020",
+    "organization":  "OnlinePayCaribe",
+    "description": "Maintaining production web apps."
+  },
+  {
+    "title": "Web Developer",
+    "start_year": "2019",
+    "end_year": "2019",
+    "organization":  "CECAR",
+    "description": "Building web apps from scratch and modeling databases (ERD)."
+  },
+  {
+    "title": "Web Developer",
+    "start_year": "2018",
+    "end_year": "2019",
+    "organization":  "Zuomy Software",
+    "description": "Building web apps from scratch and modeling databases (ERD)."
+  },
+  {
+    "title": "Web Developer",
+    "start_year": "2016",
+    "end_year": "2017",
+    "organization":  "CECAR",
+    "description": "Building web apps from scratch and modeling databases (ERD)."
+  },
+  {
+    "title": "Web Developer",
+    "start_year": "2014",
+    "end_year": "2015",
+    "organization":  "Fundimur",
+    "description": "Building web apps from scratch and modeling databases (ERD)."
+  }
+]

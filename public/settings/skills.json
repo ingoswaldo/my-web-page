@@ -1,0 +1,40 @@
+{
+  "educations": [
+    {
+      "title": "CQRS",
+      "description": "Course on CodelyTV."
+    },
+    {
+      "title": "Hexagonal Architecture",
+      "description": "Course on CodelyTV."
+    },
+    {
+      "title": "Mobile Devices",
+      "description": "Certified with 120 hours as hourly intensity."
+    },
+    {
+      "title": "System Engineer",
+      "description": "Bachelor Degree at Corporación Universitaria del Caribe - CECAR."
+    }
+  ],
+  "skills": {
+    "frontend": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Vue"
+    ],
+    "backend": [
+      "Ruby on Rails",
+      "PHP / Laravel",
+      "Wordpress",
+      "SQL"
+    ],
+    "expertises": [
+      "Responsibility",
+      "Team Work",
+      "Commitment",
+      "Adaptability"
+    ]
+  }
+}
