@@ -2,11 +2,10 @@
 import {onBeforeMount, ref} from "vue";
 import {fetchSetting} from "@/helpers/fetch.js";
 import {getImageURL} from "@/helpers/images.js";
-import {useIntersectionObserver} from "@vueuse/core";
-import {useGlobalState} from "@/store.js";
 import TextWithTwisterAnimation from "@/components/texts/TextWithTwisterAnimation.vue";
 import TextWithLeftRightAnimation from "@/components/texts/TextWithLeftRightAnimation.vue";
 import {isHomeActive} from "@/helpers/navbar.js";
+import XlContainer from "@/components/containers/XlContainer.vue";
 
 const presentation =  ref({})
 
@@ -17,7 +16,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div class="max-w-7xl mx-auto my-16 md:my-32 | px-2 sm:px-6 lg:px-8">
+  <xl-container class="my-16 md:my-32 | px-2 sm:px-6 lg:px-8">
     <div class="flex items-center">
       <div class="flex-1 | text-center sm:text-left" v-if="isHomeActive()">
         <h3 class="text-white text-2xl md:text-4xl font-extrabold | my-0 md:my-1">
@@ -38,5 +37,5 @@ onBeforeMount(() => {
         <img :src="getImageURL('computers.png')" class="object-cover h-full animate-reveal"/>
       </div>
     </div>
-  </div>
+  </xl-container>
 </template>

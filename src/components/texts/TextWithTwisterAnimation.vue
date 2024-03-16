@@ -15,6 +15,7 @@ defineProps({
       v-for="(letter, index) in text"
       :style="{ animationDelay: `${index * 0.05}s` }"
       :class="{ 'inline-block': letter !== ' '}"
+      :key="index"
   >
     {{ letter }}
   </span>

@@ -1,6 +1,14 @@
 <script setup>
+import {onMounted, ref} from "vue";
+
 defineProps({
   jobs: Array
+})
+
+const showAnimation = ref(true)
+
+onMounted(() => {
+  setInterval(() => showAnimation.value = !showAnimation.value, 1300)
 })
 
 const isMobile = () => {
@@ -19,16 +27,6 @@ const isLast = (array, index) => {
   return array.length  === (index + 1)
 }
 
-const getRightRoundedClass = (array, index) => {
-  if (isFirst(index)){
-    return 'rounded-t'
-  }
-
-  if (isLast(array, index)){
-    return 'rounded-b'
-  }
-}
-
 const joinOrganizationAndYearsOfJob = job => {
   return `${job.organization} | ${job.start_year} - ${job.end_year}`
 }
@@ -37,15 +35,19 @@ const joinOrganizationAndYearsOfJob = job => {
 <template>
   <div class="container">
     <div class="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-white">
-      <div class="flex md:contents" v-for="(job, index) in jobs" :key="index" v-bind:class="isEven(index)? '' : 'flex-row-reverse'">
+      <div class="flex md:contents" v-for="(job, index) in jobs" :key="index"
+           :class="{ 'flex-row-reverse': !isEven(index) }">
         <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative" v-if="isEven(index)" >
           <div class="h-full w-6 flex items-center justify-center">
-            <div class="h-full w-1 bg-blue pointer-events-none" v-bind:class="getRightRoundedClass(jobs, index)"></div>
+            <div class="h-full w-1 bg-blue pointer-events-none"
+                 :class="{ 'rounded-t': isFirst(index), '': isLast(jobs, index) }"></div>
           </div>
           <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue shadow"></div>
         </div>
 
-        <div class="bg-blue col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md" v-else v-bind:class="isMobile() ? 'job-right' : 'job-left'">
+        <div class="bg-blue col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md"
+             v-else
+             :class="{'job-right': isMobile(), 'job-left': !isMobile() }">
           <h3 class="font-extrabold text-2xl mb-1">{{ joinOrganizationAndYearsOfJob(job) }}</h3>
           <p class="font-extrabold text-xl mb-1">{{ job.title }}</p>
           <p class="font-medium text-justify">{{ job.description }}</p>

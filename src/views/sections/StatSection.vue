@@ -4,6 +4,7 @@ import FileCheckIcon from "@/components/icons/FileCheckIcon.vue";
 import UserIcon from "@/components/icons/UserIcon.vue";
 import SignalIcon from "@/components/icons/SignalIcon.vue";
 import CardWithIcon from "@/components/cards/CardWithIcon.vue";
+import XlContainer from "@/components/containers/XlContainer.vue";
 
 const getYearsOfExperience = ()=> {
   const yearsInMilliseconds = Math.abs(new Date('2016-01-01') - new Date())
@@ -14,7 +15,7 @@ const getYearsOfExperience = ()=> {
 </script>
 
 <template>
-  <div class="max-w-7xl mx-auto my-14 | px-2 sm:px-6 lg:px-8">
+  <xl-container class="my-14 | px-2 sm:px-6 lg:px-8">
     <div class="flex flex-wrap justify-between">
       <card-with-icon class="welcome-icon w-full md:w-72 xl:w-80" title="15" subtitle="Happy Clients">
         <user-icon class="rounded-lg | w-full | h-28 | text-blue" />
@@ -26,5 +27,5 @@ const getYearsOfExperience = ()=> {
         <file-check-icon class="rounded-lg | w-full | h-28 | text-blue" />
       </card-with-icon>
     </div>
-  </div>
+  </xl-container>
 </template>

@@ -5,6 +5,7 @@ import {ref} from "vue";
 import ThreeHorizontalLinesIcon from "@/components/icons/ThreeHorizontalLinesIcon.vue";
 import EquisIcon from "@/components/icons/EquisIcon.vue";
 import {isAboutActive, isHomeActive, isPortfolioActive, isServiceActive} from "@/helpers/navbar.js";
+import XlContainer from "@/components/containers/XlContainer.vue";
 
 const showCloseMenuIcon = ref(false)
 
@@ -23,7 +24,7 @@ const isCloseMenuIconHidden = () => {
 
 <template>
   <nav class="fixed | w-full | z-10 | top-0 | py-0 md:py-8 | bg-blue">
-    <div class="max-w-7xl mx-auto | px-2 sm:px-6 lg:px-8">
+    <xl-container class="px-2 sm:px-6 lg:px-8">
       <div class="relative | flex | items-center justify-between | h-16">
         <div class="absolute | inset-y-0 | left-0 | flex items-center sm:hidden">
           <button type="button" class="inline-flex items-center justify-center | p-2 | rounded-md | focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
@@ -62,7 +63,7 @@ const isCloseMenuIconHidden = () => {
           />
         </div>
       </div>
-    </div>
+    </xl-container>
 
     <div class="px-2 pt-2 pb-3 | space-y-1" v-show="showCloseMenuIcon">
       <nav-link

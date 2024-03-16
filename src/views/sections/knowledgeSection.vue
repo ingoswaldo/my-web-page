@@ -4,6 +4,7 @@ import CardWithUnderlineTitle from "@/components/cards/CardWithUnderlineTitle.vu
 import {onBeforeMount, ref} from "vue";
 import {fetchSetting} from "@/helpers/fetch.js";
 import CheckList from "@/components/lists/CheckList.vue";
+import XlContainer from "@/components/containers/XlContainer.vue";
 
 const knowledge = ref({})
 
@@ -14,7 +15,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div class="block md:flex | max-w-7xl mx-auto my-8 md:my-14 | px-2 sm:px-6 lg:px-8">
+  <xl-container class="block md:flex | my-8 md:my-14 | px-2 sm:px-6 lg:px-8">
     <card-with-underline-title title="Education">
       <ul class="my-8 | px-4 | list-disc | text-blue text-2xl text-justify">
         <li v-for="(education, index) in knowledge.educations" :key="index" class="education font-extrabold">{{ education.title }}
@@ -30,5 +31,5 @@ onBeforeMount(() => {
         <check-list title="Soft Skills" :data="knowledge.skills?.expertises" />
       </div>
     </card-with-underline-title>
-  </div>
+  </xl-container>
 </template>

@@ -4,6 +4,7 @@ import CardWithUnderlineTitle from "@/components/cards/CardWithUnderlineTitle.vu
 import {onBeforeMount, ref} from "vue";
 import {fetchSetting} from "@/helpers/fetch.js";
 import TimelineList from "@/components/lists/TimelineList.vue";
+import XlContainer from "@/components/containers/XlContainer.vue";
 
 const experience = ref([])
 
@@ -14,9 +15,9 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div class="flex max-w-7xl mx-auto my-8 md:my-14 | px-2 sm:px-6 lg:px-8">
+  <xl-container class="flex | my-8 md:my-14 | px-2 sm:px-6 lg:px-8">
     <card-with-underline-title title="Experience">
       <timeline-list :jobs="experience" />
     </card-with-underline-title>
-  </div>
+  </xl-container>
 </template>

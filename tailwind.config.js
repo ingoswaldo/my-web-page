@@ -70,12 +70,26 @@ export default {
             transform: 'perspective(500px) translate3d(0, 0, 0)',
           }
         },
+        fill: {
+          '0%': { fill: 'transparent' },
+        },
+        stroke: {
+          '0%': {
+            strokeDashoffset: '24px',
+            strokeDasharray: '24px'
+          },
+          '100%': {
+            strokeDashoffset: '0',
+            strokeDasharray: '24px',
+          }
+        },
       },
       animation: {
         heart: 'heart 2s infinite',
         twister: 'twister 1s forwards',
         reveal: 'reveal 1s ease-out 1 both',
         'left-right': 'leftRight 1s forwards',
+        'stroke-fill': 'stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both, fill .7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s both',
       }
     },
   },
