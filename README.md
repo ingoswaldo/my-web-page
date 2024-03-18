@@ -1,10 +1,11 @@
 #  
 
-This template should help get you started developing with Vue 3 in Vite.
+My webpage 
 
-## Recommended IDE Setup
+## Technologies
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+* Vue 3
+* Tailwindcss 3
 
 ## Customize configuration
 
