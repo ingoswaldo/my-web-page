@@ -1,17 +1,24 @@
 [
   {
+    "title": "Software Developer",
+    "start_year": "2024",
+    "end_year": "Today",
+    "organization":  "Adwise",
+    "description": "Building, maintaining and testing web APIs and modeling databases (ERD)."
+  },
+  {
     "title": "Mid Backend Developer",
     "start_year": "2021",
     "end_year": "2024",
     "organization":  "Koombea",
-    "description": "Building web apps from scratch, maintaining production web apps, testing and modeling databases (ERD)."
+    "description": "Building web apps from scratch, maintaining and testing production web apps and modeling databases (ERD)."
   },
   {
     "title": "Software Developer",
     "start_year": "2020",
     "end_year": "2021",
     "organization":  "Solvo Global",
-    "description": "Building web apps from scratch, maintaining production web apps, testing and modeling databases (ERD)."
+    "description": "Building web apps from scratch, maintaining and testing production web apps and modeling databases (ERD)."
   },
   {
     "title": "Web Developer",
