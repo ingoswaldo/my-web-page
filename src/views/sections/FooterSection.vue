@@ -27,7 +27,7 @@ onBeforeMount(() => {
             <linkedin-icon class="text-blue | w-8 h-8"/>
             <span class="hidden md:block">Oswaldo Montes</span>
           </a>
-          <a target="_blank" class="flex flex-row gap-3 text-blue font-medium text-xl | my-2" :href="footer.linkedin">
+          <a target="_blank" class="flex flex-row gap-3 text-blue font-medium text-xl | my-2" :href="footer.github">
             <github-icon class="text-blue | w-8 h-8"/>
             <span class="hidden md:block">ingoswaldo</span>
           </a>

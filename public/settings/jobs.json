@@ -1,65 +1,65 @@
 [
   {
-    "title": "Software Developer",
+    "title": "Full Stack Developer",
     "start_year": "2024",
     "end_year": "Today",
-    "organization":  "Adwise",
-    "description": "Building, maintaining and testing web APIs and modeling databases (ERD)."
+    "organization": "Adwise",
+    "description": "API maintenance, Third-part API integrations, Unit and integration testing, Database modeling and Version control (git, git flow)."
   },
   {
     "title": "Mid Backend Developer",
     "start_year": "2021",
     "end_year": "2024",
     "organization":  "Koombea",
-    "description": "Building web apps from scratch, maintaining and testing production web apps and modeling databases (ERD)."
+    "description": "Building web apps from scratch, Web apps maintenance, Third-part API integrations, Unit and integration tests, Database modeling, Version control (git, git flow) and Daily Scrum."
   },
   {
     "title": "Software Developer",
     "start_year": "2020",
     "end_year": "2021",
     "organization":  "Solvo Global",
-    "description": "Building web apps from scratch, maintaining and testing production web apps and modeling databases (ERD)."
+    "description": "Building web apps from scratch, Web apps maintenance, Third-part API integrations, Unit and integration tests, Version control (git, git flow) and Daily Scrum."
   },
   {
     "title": "Web Developer",
     "start_year": "2016",
     "end_year": "2020",
     "organization":  "Creativos Tecnológicos IT",
-    "description": "Building web apps from scratch and modeling databases (ERD)."
+    "description": "Building web apps from scratch, Web apps maintenance, Database modeling and Version control (git, git flow)."
   },
   {
     "title": "Web Developer",
     "start_year": "2017",
     "end_year": "2020",
     "organization":  "OnlinePayCaribe",
-    "description": "Maintaining production web apps."
+    "description": "Web apps maintenance, Third-part API integrations, Version control (git, git flow) and Daily Scrum."
   },
   {
     "title": "Web Developer",
     "start_year": "2019",
     "end_year": "2019",
     "organization":  "CECAR",
-    "description": "Building web apps from scratch and modeling databases (ERD)."
+    "description": "Building web apps from scratch, Web apps maintenance, Database modeling and Version control (git, git flow)."
   },
   {
     "title": "Web Developer",
     "start_year": "2018",
     "end_year": "2019",
     "organization":  "Zuomy Software",
-    "description": "Building web apps from scratch and modeling databases (ERD)."
+    "description": "Building web apps from scratch, Database modeling and Version control (git, git flow)."
   },
   {
     "title": "Web Developer",
     "start_year": "2016",
     "end_year": "2017",
     "organization":  "CECAR",
-    "description": "Building web apps from scratch and modeling databases (ERD)."
+    "description": "Building web apps from scratch, Web apps maintenance, Database modeling and Version control (git, git flow)."
   },
   {
     "title": "Web Developer",
     "start_year": "2014",
     "end_year": "2015",
     "organization":  "Fundimur",
-    "description": "Building web apps from scratch and modeling databases (ERD)."
+    "description": "Building web apps from scratch, Web apps maintenance, Database modeling and Version control (git, git flow)."
   }
 ]

@@ -17,7 +17,7 @@ const getYearsOfExperience = ()=> {
 <template>
   <xl-container class="my-14 | px-2 sm:px-6 lg:px-8">
     <div class="flex flex-wrap justify-between">
-      <card-with-icon class="welcome-icon w-full md:w-72 xl:w-80" title="15" subtitle="Happy Clients">
+      <card-with-icon class="welcome-icon w-full md:w-72 xl:w-80" title="16" subtitle="Happy Clients">
         <user-icon class="rounded-lg | w-full | h-28 | text-blue" />
       </card-with-icon>
       <card-with-icon class="welcome-icon w-full md:w-72 xl:w-80" v-bind:title="getYearsOfExperience()" subtitle="Years of Experience">
