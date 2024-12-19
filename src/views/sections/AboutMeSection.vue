@@ -16,7 +16,7 @@ onBeforeMount(() => {
 
 <template>
   <div class="block md:flex items-center w-full">
-    <img :src="getImageURL('author.jpg')" class="me xl:w-1/2 | object-cover | xl:rounded-r-3xl" />
+    <img src="/author.jpg" class="me xl:w-1/2 | object-cover | xl:rounded-r-3xl" />
 
     <div class="md:absolute | w-full md:w-1/2 lg:w-1/2 xl:w-2/3 | right-0 | bg-gray-light | md:rounded-l-3xl | px-4 py-12 ">
       <h3 class="text-blue text-4xl font-extrabold">About Me</h3>

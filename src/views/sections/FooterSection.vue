@@ -18,7 +18,7 @@ onBeforeMount(() => {
 
 <template>
   <div class="bg-gray-light mt-4 md:mt-40">
-    <img :src="getImageURL('author.jpg')" class="invisible md:visible absolute | h-1/4 lg:h-1/3 xl:h-2/5 | right-4 md:right-8 | -mt-2 md:-mt-12 | object-cover | rounded-2xl xl:rounded-3xl"/>
+    <img src="/author.jpg" class="invisible md:visible absolute | h-1/4 lg:h-1/3 xl:h-2/5 | right-4 md:right-8 | -mt-2 md:-mt-12 | object-cover | rounded-2xl xl:rounded-3xl"/>
     <xl-container class="mt-0 md:mt-16 | px-2 py-2">
       <div class="flex h-48 xl:h-96 gap-10">
         <logo-icon class="w-80 h-48 | text-blue | my-2 self-center"/>
